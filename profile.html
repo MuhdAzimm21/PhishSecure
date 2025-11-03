@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>PhishSecure</title>
+    
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+	<link href="css/magnific-popup.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="images/logo.png">
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+    
+    <!-- Preloader -->
+	<div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+    
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
+
+        <!-- Image Logo -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="username-link"  style="color:rgb(13, 164, 190)" > </a>
+            </li>
+            </ul>
+            <a class="navbar-brand logo-image" href="profile.html"><img id="avatar" src="images/defaultAvatar.jpg" class="avatar"></a>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-awesome fas fa-bars"></span>
+                <span class="navbar-toggler-awesome fas fa-times"></span>
+            </button>
+            <!-- end of mobile menu toggle button -->
+    
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="dashboard.html">DASHBOARD</a>
+                    </li>
+                    <!-- Dropdown Menu -->          
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle page-scroll" href="course.html" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">PHISHING</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item page-scroll" href="course.html#intro"><span class="item-text">INTRODUCTION</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item page-scroll" href="course.html#history"><span class="item-text">HISTORY</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item page-scroll" href="course.html#types"><span class="item-text">TYPES</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item page-scroll" href="course.html#preventions"><span class="item-text">PREVENTIONS</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item page-scroll" href="course.html#footer"><span class="item-text">CREDIT</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                        </div>
+                    </li>
+                    <!-- end of dropdown menu -->
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="quizzes.html">QUIZZES</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="profile.html">PROFILE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="leaderboard.html">LEADERBOARD</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link page-scroll" href="login.html" id="logout-link">LOGOUT</a>
+                </li>
+                </ul>
+            </div>
+        </nav> <!-- end of navbar -->
+        <!-- end of navbar -->
+
+<div class="profileheader">
+
+</div>
+
+        <div class="container">
+            <div class="main-body">
+            <br><br>
+            
+                  <div class="row gutters-sm">
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex flex-column align-items-center text-center">
+                                    <a href="editProfile.html">
+                                        <img id="profileImage" src="images/defaultAvatar.jpg" class="rounded-circle" height="150" width="150">
+                                    </a>
+                                    <div class="mt-3">
+                                        <h4 class="username" style="color:rgb(0, 1, 1)"></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        
+                      <div class="card mt-3">
+                        <ul class="list-group list-group-flush">
+                            <li class="no-bullet">
+                                <h6 style="text-align: center;">Quiz Level</h6>
+                              </li>
+                          <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                            <h6 class="mb-0">Beginner</h6>
+                            <span class="text-secondary"><a class="beginnerstatus"></a></span>
+                          </li>
+                          <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                            <h6 class="mb-0">Intermediate</h6>
+                            <span class="text-secondary"><a class="intermediatestatus"></a></span>
+                          </li>
+                          <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                            <h6 class="mb-0">Expert</h6>
+                            <span class="text-secondary"><a class="expertstatus"></a></span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="card mt-3">
+                        <ul class="list-group list-group-flush">
+                            <li class="no-bullet">
+                                <h6 style="text-align: center;">Leaderboard Ranking</h6>
+                              </li>
+                          <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                            <h6 class="mb-0">Ranking</h6>
+                            <span class="text-secondary"><a class="ranking"></a></span>
+                          </li>
+                        </ul>
+                      </div>
+
+                    </div>
+
+                    
+                    <div class="col-md-8">
+                      <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                  <h6><a style="text-align: center;">User Profile</a></h6>
+                                </div>
+                              </div>
+                              <p style="color:black; font-family: Montserrat, sans-serif;">Change password, Username and profile Icon here.</p>
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <h6 class="mb-0">Username</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                              <a class="profileUsername"></a>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <h6 class="mb-0">Email</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <a class="profileEmail"></a>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <a class="btn btn-info " href="editProfile.html">Edit Profile</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+        
+                      <div class="row gutters-sm">
+                        <div class="col-sm-6 mb-3">
+                          <div class="card h-100">
+                            <div class="card-body">
+                              <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Badges</i></h6>
+                              <ul class="list-group list-group-flush">
+                              <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                <h6 class="mb-0">Beginner</h6>
+                                <span class="text-secondary"><img class="beginnerbadge" alt="Beginner Badge"></span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                <h6 class="mb-0">Intermediate</h6>
+                                <span class="text-secondary"><img class="intermediatebadge" alt="Intermediate Badge"></span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                <h6 class="mb-0">Expert</h6>
+                                <span class="text-secondary"><img class="expertbadge" alt="expert Badge"></span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                <h6 class="mb-0">Total Badges</h6>
+                                <span class="text-secondary"><a class="sumbadge"></a></span>
+                              </li>
+                            </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                          <div class="card h-100">
+                            <div class="card-body">
+                              <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Points</i></h6>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                    <br><br><br><br><br>
+                                    <h6 class="mb-0">Beginner</h6>
+                                    <span class="text-secondary"><a class="beginnerpoint"></a></span>
+                                    <br><br><br><br><br>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                    <br><br><br><br><br>
+                                    <h6 class="mb-0">Intermediate</h6>
+                                    <span class="text-secondary"><a class="intermediatepoint"></a></span>
+                                    <br><br><br><br><br>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                    <br><br><br><br><br>
+                                    <h6 class="mb-0">Expert</h6>
+                                    <span class="text-secondary"><a class="expertpoint"></a></span>
+                                    <br><br><br><br><br>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                    <h6 class="mb-0">Total Points</h6>
+                                    <span class="text-secondary"><a class="sumpoint"></a></span>
+                                  </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+        
+        
+        
+                    </div>
+                  </div>
+        
+                </div>
+            </div>
+
+
+    <!-- Footer -->
+    <div id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-container about">
+                        <h4>Credit</h4>
+                        <p class="white">Information from this phishing course was sourced from several websites. We acknowledge the valuable insights and resources provided by these sources in the development of this course. Special thanks for their contributions go to: </p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-md-2">
+                    <div class="text-container">
+                        <h4>Links</h4>
+                        <ul class="list-unstyled li-space-lg white">
+                            <li>
+                                <a class="white" href="https://www.phishing.org/history-of-phishing">www.phishing.org</a>
+                            </li>
+                            <li>
+                                <a class="white" href="https://us.norton.com/blog/online-scams/types-of-phishing">us.norton.com</a>
+                            </li>
+                            <li>
+                                <a class="white" href="https://www.knowbe4.com/phishing#4">www.knowbe4.com</a>
+                            </li>
+                            <li>
+                                <a class="white" href="https://www.slideshare.net/AniketPandit18/phishing-attack-seminar-presentation">www.slideshare.net</a>
+                            </li>
+                        </ul>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
+    
+    	
+    <!-- Scripts -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        import { getDatabase, ref, onValue, update } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+    
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+  apiKey: "AIzaSyDPRVp-gibvlZ5VIUl4ZfBxBcOpA5fjatc",
+  authDomain: "phish-38fef.firebaseapp.com",
+  databaseURL: "https://phish-38fef-default-rtdb.firebaseio.com/",
+  projectId: "phish-38fef",
+  storageBucket: "phish-38fef.appspot.com",
+  messagingSenderId: "206566350425",
+  appId: "1:206566350425:web:2daec834375550dba55b48"
+};
+    
+         // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase();
+    const auth = getAuth();
+    const usernameLink = document.querySelector('.username-link');
+    const showusername = document.querySelector('.username');
+    const username = document.querySelector('.profileUsername');
+    const email = document.querySelector('.profileEmail');
+    const beginnerpoint = document.querySelector('.beginnerpoint');
+    const intermediatepoint = document.querySelector('.intermediatepoint');
+    const expertpoint = document.querySelector('.expertpoint');
+    const sumpoint = document.querySelector('.sumpoint');
+    const sumbadge = document.querySelector('.sumbadge');
+    const beginnerbadge = document.querySelector('.beginnerbadge');
+    const intermediatebadge = document.querySelector('.intermediatebadge');
+    const expertbadge = document.querySelector('.expertbadge');
+    const beginnerstatus = document.querySelector('.beginnerstatus');
+    const intermediatestatus = document.querySelector('.intermediatestatus');
+    const expertstatus = document.querySelector('.expertstatus');
+    const userRanking = document.querySelector('.ranking');
+
+// Check if the user is authenticated
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        // User is signed in
+        const userId = user.uid;
+        console.log("User is logged in:", userId);
+
+        // Fetch user information from the database using the current user's ID
+        const userRef = ref(database, 'users/' + userId);
+        onValue(userRef, (snapshot) => {
+            const userData = snapshot.val();
+            displayUserInfo(userData);
+            showUserInfo(userData);
+            usernameInProfile(userData);
+            emailInProfile(userData);
+            ranking(userData);
+            beginnerpoints(userData);
+            intermediatepoints(userData);
+            expertpoints(userData);
+            calculateTotalPoints(userData);
+            calculateTotalBadges(userData);
+            beginnerBadges(userData);
+            intermediateBadges(userData);
+            expertBadges(userData);
+            beginnerStatus(userData);
+            intermediateStatus(userData);
+            expertStatus(userData);
+            document.getElementById('profileImage').src = getProfileIconSrc(userData.profileIcon);
+            document.getElementById('avatar').src = getProfileIconSrc(userData.profileIcon);
+
+        });
+    } else {
+        console.log("No user is currently logged in");
+    }
+});
+
+function displayUserInfo(userData) {
+    // Display user information on the page
+    if (userData) {
+        usernameLink.textContent = userData.username ; // Display username in the navigation
+    } else {
+        console.log('User data not available');
+    }
+}
+
+function showUserInfo(userData) {
+    // Display user information on the page
+    if (userData) {
+        showusername.textContent =userData.username; // Display username in the navigation
+    } else {
+        console.log('User data not available');
+    }
+}
+
+function usernameInProfile(userData) {
+    // Display user information on the page
+    if (userData) {
+        username.textContent =userData.username; // Display username in the user menu
+    } else {
+        console.log('User data not available');
+    }
+}
+
+function emailInProfile(userData) {
+    // Display user information on the page
+    if (userData) {
+        email.textContent =userData.email; // Display email in the user menu
+    } else {
+        console.log('User data not available');
+    }
+}
+
+function ranking(userData) {
+    // Display user information on the page
+    if (userData && userData.ranking) {
+        userRanking.textContent =userData.ranking; // Display points beginner in the user menu
+    } else {
+        userRanking.textContent = 'Not Available'; // Display 0 if user data or BeginnerLevel points are not available
+    }
+}
+
+function beginnerpoints(userData) {
+    // Display user information on the page
+    if (userData && userData.points && userData.points.BeginnerLevel) {
+        beginnerpoint.textContent = userData.points.BeginnerLevel; // Display points beginner in the user menu
+    } else {
+        beginnerpoint.textContent = '0'; // Display 0 if user data or BeginnerLevel points are not available
+        console.log('User data or BeginnerLevel points not available');
+    }
+}
+
+function intermediatepoints(userData) {
+    // Display user information on the page
+    if (userData && userData.points && userData.points.IntermediateLevel) {
+        intermediatepoint.textContent = userData.points.IntermediateLevel; // Display points intermediate in the user menu
+    } else {
+        intermediatepoint.textContent = '0'; // Display 0 if user data or intermediate points are not available
+        console.log('User data or IntermediateLevel points not available');
+    }
+}
+
+function expertpoints(userData) {
+    // Display user information on the page
+    if (userData && userData.points && userData.points.ExpertLevel) {
+        expertpoint.textContent = userData.points.ExpertLevel; // Display points expert in the user menu
+    } else {
+        expertpoint.textContent = '0'; // Display 0 if user data or expert points are not available
+        console.log('User data or ExpertLevel points not available');
+    }
+}
+
+function beginnerBadges(userData) {
+    // Display user information on the page
+    if (userData && userData.badges && userData.badges.BeginnerBadge) {
+        // Set the image source to the image name if it's in the same directory
+        beginnerbadge.src = 'images/BeginnerBadge.png';
+    } else {
+        beginnerbadge.src = 'images/defaultBadge.png'; // Clear the image source if badge is not available
+        console.log('User data or Beginner Badge points not available');
+    }
+}
+
+function intermediateBadges(userData) {
+    // Display user information on the page
+    if (userData && userData.badges && userData.badges.IntermediateBadge) {
+        // Set the image source to the image name if it's in the same directory
+        intermediatebadge.src = 'images/IntermediateBadge.png';
+    } else {
+        intermediatebadge.src = 'images/defaultBadge.png'; // Clear the image source if badge is not available
+        console.log('User data or Intermediate Badge points not available');
+    }
+}
+
+function expertBadges(userData) {
+    // Display user information on the page
+    if (userData && userData.badges && userData.badges.ExpertBadge) {
+        // Set the image source to the image name if it's in the same directory
+        expertbadge.src = 'images/ExpertBadge.png';
+    } else {
+        expertbadge.src = 'images/defaultBadge.png'; // Clear the image source if badge is not available
+        console.log('User data or Expert Badge points not available');
+    }
+}
+
+function beginnerStatus(userData) {
+    // Display user information on the page
+    if (userData && userData.points && userData.points.BeginnerLevel >= 50) {
+        beginnerstatus.textContent = 'Completed'; // Display Status complete beginner in the user menu
+    } else {
+        beginnerstatus.textContent = 'Incomplete'; // Display 0 if user data or BeginnerLevel points are not available
+        console.log('User data or BeginnerLevel points not available');
+    }
+}
+
+function intermediateStatus(userData) {
+    // Display user information on the page
+    if (userData && userData.points && userData.points.IntermediateLevel >= 50) {
+        intermediatestatus.textContent = 'Completed'; // Display status intermediate in the user menu
+    } else {
+        intermediatestatus.textContent = 'Incomplete'; // Display 0 if user data or intermediate points are not available
+        console.log('User data or IntermediateLevel points not available');
+    }
+}
+
+function expertStatus(userData) {
+    // Display user information on the page
+    if (userData && userData.points && userData.points.ExpertLevel >= 50) {
+        expertstatus.textContent = 'Completed'; // Display points expert in the user menu
+    } else {
+        expertstatus.textContent = 'Incomplete'; // Display 0 if user data or expert points are not available
+        console.log('User data or ExpertLevel points not available');
+    }
+}
+
+function calculateTotalPoints(userData) {
+    let totalPoints = 0;
+
+    if (userData && userData.points) {
+        const points = userData.points;
+        // Check if each level's points exist and add them to the total
+        if (points.BeginnerLevel) {
+            totalPoints += points.BeginnerLevel;
+        }
+        if (points.IntermediateLevel) {
+            totalPoints += points.IntermediateLevel;
+        }
+        if (points.ExpertLevel) {
+            totalPoints += points.ExpertLevel;
+        }
+    } else {
+        console.log('User data or points not available');
+    }
+
+    // Assuming 'sumpoint' is an element where you want to display the total points
+    sumpoint.textContent = totalPoints;
+}
+
+function calculateTotalBadges(userData) {
+    let totalBadges = 0;
+
+    // Check if each badge exists and increment totalBadges accordingly
+    if (userData && userData.badges) {
+        if (userData.badges.BeginnerBadge) {
+            totalBadges++;
+        }
+        if (userData.badges.IntermediateBadge) {
+            totalBadges++;
+        }
+        if (userData.badges.ExpertBadge) {
+            totalBadges++;
+        }
+    } else {
+        console.log('User data or badges not available');
+    }
+
+    sumbadge.textContent = totalBadges;
+
+    const user = auth.currentUser;
+
+
+}
+
+function getProfileIconSrc(iconName) {
+    switch(iconName) {
+        case "Icon 1":
+            return "images/team-1.png";
+        case "Icon 2":
+            return "images/team-2.png";
+        case "Icon 3":
+            return "images/team-3.png";
+        default:
+            // Handle the case if the iconName is not recognized
+            return "images/defaultAvatar.jpg"; // You might want to return a default image path or handle this case differently based on your requirements
+    }
+}
+ 
+    // Logout function
+    function logout() {
+            auth.signOut().then(() => {
+                window.location.href = 'SignInOut.html'; // Redirect to login page
+            }).catch((error) => {
+                console.error('Sign Out Error', error);
+            });
+        }
+
+        // Attach logout function to the logout link
+        document.getElementById('logout-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            logout();
+        });
+    </script>
+
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+    <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+    <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+
+</body>
+</html>

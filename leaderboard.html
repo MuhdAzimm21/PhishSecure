@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:site_name" content="" />
+    <meta property="og:site" content="" />
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="article" />
+    <title>PhishSecure</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="icon" href="images/logo.png">
+</head>
+<body data-spy="scroll" data-target=".fixed-top" class="lbody">
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="username-link" style="color:rgb(13, 164, 190)"></a>
+            </li>
+        </ul>
+        <a class="navbar-brand logo-image" href="profile.html"><img id="avatar" src="images/defaultAvatar.jpg" class="avatar"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="dashboard.html">DASHBOARD</a>
+                </li>
+                <!-- Dropdown Menu -->          
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="course.html" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">PHISHING</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item page-scroll" href="course.html#intro"><span class="item-text">INTRODUCTION</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item page-scroll" href="course.html#history"><span class="item-text">HISTORY</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item page-scroll" href="course.html#types"><span class="item-text">TYPES</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item page-scroll" href="course.html#preventions"><span class="item-text">PREVENTIONS</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item page-scroll" href="course.html#footer"><span class="item-text">CREDIT</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                    </div>
+                </li>
+                <!-- end of dropdown menu -->
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="quizzes.html">QUIZZES</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="profile.html">PROFILE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="leaderboard.html">LEADERBOARD</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link page-scroll" href="SignInOut.html" id="logout-link">LOGOUT</a>
+            </li>
+            </ul>
+        </div>
+    </nav> <!-- end of navbar -->
+    <!-- end of navbar -->
+<br><br><br><br><br>
+<div class="leaderbody">
+    <div class="leaderboard">
+        <h1>LEADERBOARD</h1><br>
+        <div class="headers">
+            <div class="header-rank">Ranking</div>
+            <div class="header-icon">Icon</div>
+            <div class="header-player">Username</div>
+            <div class="header-point">Points</div>
+            <div class="header-level">Levels</div>
+            <div class="header-badge">Badges</div>
+        </div>
+        <ul id="leaderboardBody">
+            <!-- User data will be dynamically inserted here -->
+        </ul>
+    </div><br>
+    <button class="btn btn-secondary" onclick="goBack()">Back</button>
+</div>
+
+
+
+    <br><br><br><br>
+    <div id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-container about">
+                        <h4>Credit</h4>
+                        <p class="white">Information from this phishing course was sourced from several websites. We acknowledge the valuable insights and resources provided by these sources in the development of this course. Special thanks for their contributions go to: </p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="text-container">
+                        <h4>Links</h4>
+                        <ul class="list-unstyled li-space-lg white">
+                            <li><a class="white" href="https://www.phishing.org/history-of-phishing">www.phishing.org</a></li>
+                            <li><a class="white" href="https://us.norton.com/blog/online-scams/types-of-phishing">us.norton.com</a></li>
+                            <li><a class="white" href="https://www.knowbe4.com/phishing#4">www.knowbe4.com</a></li>
+                            <li><a class="white" href="https://www.slideshare.net/AniketPandit18/phishing-attack-seminar-presentation">www.slideshare.net</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        import { getDatabase, ref, onValue, set } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+  apiKey: "AIzaSyDPRVp-gibvlZ5VIUl4ZfBxBcOpA5fjatc",
+  authDomain: "phish-38fef.firebaseapp.com",
+  databaseURL: "https://phish-38fef-default-rtdb.firebaseio.com/",
+  projectId: "phish-38fef",
+  storageBucket: "phish-38fef.appspot.com",
+  messagingSenderId: "206566350425",
+  appId: "1:206566350425:web:2daec834375550dba55b48"
+};
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase();
+        const auth = getAuth();
+
+        const leaderboardBody = document.getElementById('leaderboardBody');
+
+        function getProfileIconSrc(iconName) {
+            switch (iconName) {
+                case "Icon 1":
+                    return "images/team-1.png";
+                case "Icon 2":
+                    return "images/team-2.png";
+                case "Icon 3":
+                    return "images/team-3.png";
+                default:
+                    return "images/defaultAvatar.jpg";
+            }
+        }
+
+        
+
+        function sortUsers(users) {
+        return Object.values(users).sort((a, b) => {
+        const pointsA = a.points ? a.points.totalPoints || 0 : 0;
+        const pointsB = b.points ? b.points.totalPoints || 0 : 0;
+
+        // Compare points
+        if (pointsA !== pointsB) {
+            return pointsB - pointsA;
+        } else {
+            const badgesA = a.badges ? a.badges.totalBadges || 0 : 0;
+            const badgesB = b.badges ? b.badges.totalBadges || 0 : 0;
+
+            // Compare badges
+            if (badgesA !== badgesB) {
+                return badgesB - badgesA;
+            } else {
+                const timestampA = a.creationTimestamp || 0;
+                const timestampB = b.creationTimestamp || 0;
+
+                // Compare creation timestamps (older user first)
+                return timestampA - timestampB;
+            }
+        }
+    });
+}
+
+        function saveUserRanking(userId, userRanking) {
+            const userRef = ref(database, 'users/' + userId + '/ranking');
+            set(userRef, userRanking)
+                .then(() => {
+                    console.log("User ranking saved successfully!");
+                })
+                .catch((error) => {
+                    console.error("Error saving user ranking: ", error);
+                });
+        }
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                const currentUserId = user.uid;
+                console.log("User is logged in:", currentUserId);
+                const userRef = ref(database, 'users/' + currentUserId);
+                onValue(userRef, (snapshot) => {
+                    const userData = snapshot.val();
+                    if (userData) {
+                        document.querySelector('.username-link').textContent = userData.username || "User";
+                        document.getElementById('avatar').src = getProfileIconSrc(userData.profileIcon);
+                    }
+                });
+
+                const usersRef = ref(database, 'users/');
+                onValue(usersRef, (snapshot) => {
+                    const allUsersData = snapshot.val();
+                    if (allUsersData) {
+                        const sortedUsers = sortUsers(allUsersData);
+                        const currentUserIndex = sortedUsers.findIndex(user => user.uid === currentUserId);
+                        if (currentUserIndex !== -1) {
+                            const currentUserRanking = currentUserIndex + 1;
+                            displayUserInfo(allUsersData, currentUserId);
+                            saveUserRanking(currentUserId, currentUserRanking);
+                        }
+                    }
+                });
+            } else {
+                console.log("No user is currently logged in");
+            }
+        });
+
+        function highlightTopThree() {
+        const topThreeRows = leaderboardBody.querySelectorAll('li');
+
+        // Remove existing highlight classes
+        topThreeRows.forEach(row => {
+        row.classList.remove('gold', 'silver', 'bronze');
+        });
+
+        // Highlight the top three ranks
+        if (topThreeRows.length >= 1) {
+            topThreeRows[0].classList.add('gold');
+        }
+        if (topThreeRows.length >= 2) {
+            topThreeRows[1].classList.add('silver');
+        }
+        if (topThreeRows.length >= 3) {
+            topThreeRows[2].classList.add('bronze');
+        }
+    }
+
+        function displayUserInfo(userData, currentUserId) {
+        const sortedUsers = sortUsers(userData);
+        leaderboardBody.innerHTML = '';
+        sortedUsers.forEach((user, index) => {
+        const row = document.createElement('li');
+        const levelText = user.currentLevel && user.currentLevel.level ? user.currentLevel.level : '-';
+
+        row.innerHTML = `
+            <div class="rank">${index + 1}</div>
+            <div class="icon"><img class="profile-icon" src="${getProfileIconSrc(user.profileIcon)}" alt="Profile Icon"></div>
+            <div class="player">${user.username}</div>
+            <div class="score">${user.points ? user.points.totalPoints || 0 : 0}</div>
+            <div class="level">${levelText}</div>
+            <div class="badges">${user.badges ? user.badges.totalBadges || 0 : 0}</div>
+        `;
+        if (user.uid === currentUserId) {
+            row.classList.add('highlight');
+            console.log("this user is " + currentUserId); 
+        }
+        leaderboardBody.appendChild(row);
+        });
+
+        // Highlight top three ranks
+        highlightTopThree();
+    }
+
+    function scrollToCurrentUser() {
+    const currentUserRow = leaderboardBody.querySelector('.highlight');
+    if (currentUserRow) {
+        // Add a class to the current user row
+        currentUserRow.classList.add('current-user');
+        // Scroll smoothly to the current user row
+        currentUserRow.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        setTimeout(() => {
+            currentUserRow.classList.remove('current-user');
+        }, 800);
+    }
+}
+
+        function loadUserData() {
+            const userRef = ref(database, 'users');
+            onValue(userRef, (snapshot) => {
+                const userData = snapshot.val();
+                onAuthStateChanged(auth, (user) => {
+                    if (user) {
+                        displayUserInfo(userData, user.uid);
+                    } else {
+                        displayUserInfo(userData, null);
+                    }
+
+                    // After loading user data, scroll to the current user
+            scrollToCurrentUser();
+                });
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+            loadUserData();
+        });
+
+            // Logout function
+    function logout() {
+            auth.signOut().then(() => {
+                window.location.href = 'SignInOut.html'; // Redirect to login page
+            }).catch((error) => {
+                console.error('Sign Out Error', error);
+            });
+        }
+
+        // Attach logout function to the logout link
+        document.getElementById('logout-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            logout();
+        });
+    </script>
+
+<script>
+    function goBack() {
+window.location.href = 'dashboard.html';
+}
+</script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/morphext.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/validator.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

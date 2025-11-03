@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Forgot Password</title>
+    <link href="css/signinout.css" rel="stylesheet">
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+        <div class="front">
+            <img src="images/intro-office.jpg" alt="">
+        </div>
+        <div class="back">
+            <img class="backImg" src="images/intro-office.jpg" alt="">
+        </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+            <div class="login-form">
+                <div class="title">Forgot Password</div>
+                <form action="#">
+                    <div class="input-boxes">
+                        <div class="input-box">
+                            <i class="fas fa-envelope"></i>
+                            <input id="email" type="text" placeholder="Enter your email" required>
+                            <span id="emailStatus"></span>
+                        </div>
+                        <h6>Enter Security Question Answer to Reset Password</h6>
+                        <div class="input-box">
+                            <i class="fas fa-key"></i>
+                            <input id="securityQ1" placeholder="Enter Mother's Name" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-key"></i>
+                            <input id="securityQ2" placeholder="Enter Father's Name" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-eye" aria-hidden="true" id="reseteye"></i>
+                            <input id="resetPassword" type="password" placeholder="Enter your new password" required>
+                        </div>
+                        <div class="text">Return to <a href="SignInOut.html">Login Page</a></div>
+                        <div class="button input-box">
+                            <input type="button" id="resetbtn" class="log-in" value="Submit">
+                        </div>
+                        <div id="message" class="message"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword, updatePassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+  import { getDatabase, ref, get, child, update } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+  
+  const firebaseConfig = {
+    apiKey: "AIzaSyDPRVp-gibvlZ5VIUl4ZfBxBcOpA5fjatc",
+    authDomain: "phish-38fef.firebaseapp.com",
+    databaseURL: "https://phish-38fef-default-rtdb.firebaseio.com/",
+    projectId: "phish-38fef",
+    storageBucket: "phish-38fef.appspot.com",
+    messagingSenderId: "206566350425",
+    appId: "1:206566350425:web:2daec834375550dba55b48"
+  };
+  
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const database = getDatabase(app);
+  
+  const emailInput = document.getElementById('email');
+  const securityQ1Input = document.getElementById('securityQ1');
+  const securityQ2Input = document.getElementById('securityQ2');
+  const resetPasswordInput = document.getElementById('resetPassword');
+  const resetBtn = document.getElementById('resetbtn');
+  const emailStatus = document.getElementById('emailStatus');
+  const messageDiv = document.getElementById('message');
+  
+  function displayMessage(message, isSuccess) {
+    messageDiv.innerText = message;
+    messageDiv.style.color = isSuccess ? "green" : "red";
+  }
+  
+  emailInput.addEventListener('blur', () => {
+    const email = emailInput.value.trim().toLowerCase();
+    const dbRef = ref(database, 'users');
+    get(child(dbRef, '/')).then((snapshot) => {
+      let emailExists = false;
+      snapshot.forEach((userSnapshot) => {
+        const userData = userSnapshot.val();
+        if (userData.email && userData.email.toLowerCase() === email) {
+          emailExists = true;
+          emailInput.style.borderColor = "green";
+          emailStatus.innerHTML = "<i class='fas fa-check' style='color:green;'></i>";
+          window.userId = userSnapshot.key; // Store the userId for later use
+        }
+      });
+      if (!emailExists) {
+        emailInput.style.borderColor = "red";
+        emailStatus.innerHTML = "<i class='fas fa-times' style='color:red;'></i>";
+      }
+    }).catch((error) => {
+      displayMessage('Error accessing database: ' + error.message, false);
+    });
+  });
+  
+  resetBtn.addEventListener('click', () => {
+    const email = emailInput.value.trim().toLowerCase();
+    const newPassword = resetPasswordInput.value;
+    const securityQ1Answer = securityQ1Input.value.trim().toLowerCase();
+    const securityQ2Answer = securityQ2Input.value.trim().toLowerCase();
+  
+    const dbRef = ref(database, 'users');
+    get(child(dbRef, '/')).then((snapshot) => {
+      let emailExists = false;
+      snapshot.forEach((userSnapshot) => {
+        const userData = userSnapshot.val();
+        if (userData.email && userData.email.toLowerCase() === email) {
+          emailExists = true;
+          if (userData.securityQuestion1.toLowerCase() === securityQ1Answer &&
+            userData.securityQuestion2.toLowerCase() === securityQ2Answer) {
+            
+            const userId = userSnapshot.key;
+  
+            // Update password in the Realtime Database
+            update(ref(database, `users/${userId}`), { password: newPassword })
+              .then(() => {
+                // Update password in Authentication
+                signInWithEmailAndPassword(auth, email, userData.password)
+                  .then((userCredential) => {
+                    const user = userCredential.user;
+                    updatePassword(user, newPassword).then(() => {
+                      displayMessage('Password Reset Successful', true);
+                    }).catch((error) => {
+                      displayMessage('Error resetting password in Auth: ' + error.message, false);
+                    });
+                  }).catch((error) => {
+                    displayMessage('Error signing in to reset password: ' + error.message, false);
+                  });
+              }).catch((error) => {
+                displayMessage('Error updating password in database: ' + error.message, false);
+              });
+          } else {
+            displayMessage('Security answers do not match.', false);
+          }
+        }
+      });
+      if (!emailExists) {
+        displayMessage('Email not found.', false);
+      }
+    }).catch((error) => {
+      displayMessage('Error accessing database: ' + error.message, false);
+    });
+  });
+  </script>
+
+  <script>
+    function togglePasswordVisibility() {
+          const passwordInput = document.getElementById("resetPassword");
+          const passwordToggle = document.querySelector("#reseteye");
+
+          passwordToggle.addEventListener("click", function () {
+              if (passwordInput.type === "password") {
+                  passwordInput.type = "text";
+                  passwordToggle.classList.remove("fa-eye");
+                  passwordToggle.classList.add("fa-eye-slash");
+              } else {
+                  passwordInput.type = "password";
+                  passwordToggle.classList.remove("fa-eye-slash");
+                  passwordToggle.classList.add("fa-eye");
+              }
+          });
+      }
+
+      togglePasswordVisibility();
+  </script>
+  
+</body>
+</html>

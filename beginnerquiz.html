@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>PhishSecure</title>
+    
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+	<link href="css/magnific-popup.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="images/logo.png">
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+    
+    <!-- Preloader -->
+	<div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+    
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
+
+        <!-- Image Logo -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="username-link"  style="color:rgb(13, 164, 190)" > </a>
+            </li>
+            </ul>
+            <a class="navbar-brand logo-image" href="profile.html"><img id="avatar" src="images/defaultAvatar.jpg" class="avatar"></a>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-awesome fas fa-bars"></span>
+                <span class="navbar-toggler-awesome fas fa-times"></span>
+            </button>
+            <!-- end of mobile menu toggle button -->
+    
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="dashboard.html">DASHBOARD</a>
+                    </li>
+                    <!-- Dropdown Menu -->          
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle page-scroll" href="course.html" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">PHISHING</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item page-scroll" href="course.html#intro"><span class="item-text">INTRODUCTION</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item page-scroll" href="course.html#history"><span class="item-text">HISTORY</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item page-scroll" href="course.html#types"><span class="item-text">TYPES</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item page-scroll" href="course.html#preventions"><span class="item-text">PREVENTIONS</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item page-scroll" href="course.html#footer"><span class="item-text">CREDIT</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                        </div>
+                    </li>
+                    <!-- end of dropdown menu -->
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="quizzes.html">QUIZZES</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="profile.html">PROFILE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="leaderboard.html">LEADERBOARD</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link page-scroll" href="login.html" id="logout-link">LOGOUT</a>
+                </li>
+                </ul>
+            </div>
+        </nav> <!-- end of navbar -->
+        <!-- end of navbar -->
+
+
+        <div class="beginnercontainer">
+            <h1>Phishing Quiz<br> (beginner's Level)</h1>
+            <p>This quiz level features engaging questions on the introduction and history of phishing from the phishing course. Use the suggested answers to fill in the blanks and test your knowledge!</p>
+            <form class="form-container" >
+                <p style="text-align: center">
+                    <span>bulk</span>
+                    <span>telecommunication</span>
+                    <span>1996</span>
+                    <span>messages</span>
+                    <br><br>
+                    <span>E-Gold</span>
+                    <span>2003</span>
+                    <span>phishing</span>
+                    <span>25%</span>
+                    <span>76%</span>
+                    <span>spoof</span>
+                </p>
+            </form>
+            <br><br>
+            <form>
+                <div class="bqform-group">
+                    <label for="question1">1. Phishing is the process of attempting to acquire sensitive information such as usernames, passwords, and credit card details by masquerading as a trustworthy entity using <span class="answer-box">__________</span> email.</label><br><br>
+                    <input  type="text" class="form-control" id="question1" name="question1" placeholder="Your Answer">
+                </div>
+                <br><br>
+                <div class="bqform-group">
+                    <label for="question2">2. The term "phishing" is derived from early hackers called "phreaks" who studied <span class="answer-box">__________</span> systems.</label><br><br>
+                    <input type="text" class="form-control" id="question2" name="question2" placeholder="Your Answer">
+                </div>
+                <br><br>
+                <div class="bqform-group">
+                    <label for="question3">3. According to Internet records, the first recorded mention of "phishing" was in <span class="answer-box">__________</span>.</label><br><br>
+                    <input type="text" class="form-control" id="question3" name="question3" placeholder="Your Answer">
+                </div>
+                <br><br>
+                <div class="bqform-group">
+                    <label for="question4">4. Through the AOL instant messenger and email systems, they would send <span class="answer-box">__________</span>to users while posing as AOL employees..</label><br><br>
+                    <input type="text" class="form-control" id="question4" name="question4" placeholder="Your Answer">
+                </div>
+                <br><br>
+                <div class="bqform-group">
+                    <label for="question5">5. In 2001, phishers began exploiting online payment systems, starting with an attack on  <span class="answer-box">__________</span>.</label><br><br>
+                    <input type="text" class="form-control" id="question5" name="question5" placeholder="Your Answer">
+                </div>
+                <br><br>
+                <div class="bqform-group">
+                    <label for="question6">6. The first known phishing attack against a bank was reported in  <span class="answer-box">__________</span>.</label><br><br>
+                    <input type="text" class="form-control" id="question6" name="question6" placeholder="Your Answer">
+                </div>
+                <br><br>
+                <div class="bqform-group">
+                    <label for="question7">7. In May 2004 and May 2005, approximately 1.2 million computer users in the United States suffered losses totaling approximately US $929 million due to  <span class="answer-box">__________</span>.</label><br><br>
+                    <input type="text" class="form-control" id="question7" name="question7" placeholder="Your Answer">
+                </div>
+                <br><br>
+                <div class="bqform-group">
+                    <label for="question8">8. In 2009, the US and China each hosted more than <span class="answer-box">__________</span> of phishing sites.</label><br><br>
+                    <input type="text" class="form-control" id="question8" name="question8" placeholder="Your Answer">
+                </div>
+                <br><br>
+                <div class="bqform-group">
+                    <label for="question9">9. In 2017, <span class="answer-box">__________</span> of organizations experienced phishing attacks.</label><br><br>
+                    <input type="text" class="form-control" id="question9" name="question9" placeholder="Your Answer">
+                </div>
+                <br><br>
+                <div class="bqform-group">
+                    <label for="question10">10. pointing email links to non-existent pages on an attacker-controlled website so that a custom 404 page is presented that can be used to <span class="answer-box">__________</span> logon pages for legitimate sites.</label><br><br>
+                    <input type="text" class="form-control" id="question10" name="question10" placeholder="Your Answer">
+                </div>
+                <!-- Add more questions here following the same format -->
+
+                
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <br>
+            <!-- Back Button -->
+            <button class="btn btn-secondary" onclick="goBack()">Back</button>
+        </div>
+
+    <!-- Score Modal -->
+    <div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="scoreModalLabel">Quiz Result</h5>
+                </div>
+                <div class="modal-body">
+                    <img id="badgeImage" src="" alt="Badge Image" class="badgeimg">
+                    <p id="scoreMessage" class="scoreMessage" ></p>
+                </div>
+                <div class="modal-footer">
+                    <button id="closeScoreModal" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-container about">
+                        <h4>Credit</h4>
+                        <p class="white">Information from this phishing LMS was sourced from several websites. We acknowledge the valuable insights and resources provided by these sources in the development of this course. Special thanks for their contributions go to: </p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-md-2">
+                    <div class="text-container">
+                        <h4>Links</h4>
+                        <ul class="list-unstyled li-space-lg white">
+                            <li>
+                                <a class="white" href="https://www.phishing.org/history-of-phishing">www.phishing.org</a>
+                            </li>
+                            <li>
+                                <a class="white" href="https://us.norton.com/blog/online-scams/types-of-phishing">us.norton.com</a>
+                            </li>
+                            <li>
+                                <a class="white" href="https://www.knowbe4.com/phishing#4">www.knowbe4.com</a>
+                            </li>
+                            <li>
+                                <a class="white" href="https://www.slideshare.net/AniketPandit18/phishing-attack-seminar-presentation">www.slideshare.net</a>
+                            </li>
+                        </ul>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
+    
+    	
+    <!-- Scripts -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        import { getDatabase, ref, onValue, update } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+    
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+  apiKey: "AIzaSyDPRVp-gibvlZ5VIUl4ZfBxBcOpA5fjatc",
+  authDomain: "phish-38fef.firebaseapp.com",
+  databaseURL: "https://phish-38fef-default-rtdb.firebaseio.com/",
+  projectId: "phish-38fef",
+  storageBucket: "phish-38fef.appspot.com",
+  messagingSenderId: "206566350425",
+  appId: "1:206566350425:web:2daec834375550dba55b48"
+};
+    
+         // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase();
+    const auth = getAuth();
+    const usernameLink = document.querySelector('.username-link');
+
+// Check if the user is authenticated
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        // User is signed in
+        const userId = user.uid;
+        console.log("User is logged in:", userId);
+
+        // Fetch user information from the database using the current user's ID
+        const userRef = ref(database, 'users/' + userId);
+        onValue(userRef, (snapshot) => {
+            const userData = snapshot.val();
+            displayUserInfo(userData);
+            document.getElementById('avatar').src = getProfileIconSrc(userData.profileIcon);
+        });
+    } else {
+        console.log("No user is currently logged in");
+    }
+});
+
+function displayUserInfo(userData) {
+    // Display user information on the page
+    if (userData) {
+        usernameLink.textContent = userData.username ; // Display username in the navigation
+    } else {
+        console.log('User data not available');
+    }
+}
+
+$(document).ready(function() {
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+  apiKey: "AIzaSyDPRVp-gibvlZ5VIUl4ZfBxBcOpA5fjatc",
+  authDomain: "phish-38fef.firebaseapp.com",
+  databaseURL: "https://phish-38fef-default-rtdb.firebaseio.com/",
+  projectId: "phish-38fef",
+  storageBucket: "phish-38fef.appspot.com",
+  messagingSenderId: "206566350425",
+  appId: "1:206566350425:web:2daec834375550dba55b48"
+};
+
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase();
+    const auth = getAuth();
+
+    // Update points and badges in Firebase
+    function updatePointsAndBadges(score) {
+        const user = auth.currentUser;
+        if (user) {
+            const userId = user.uid;
+            const userPointsRef = ref(database, 'users/' + userId + '/points');
+            const userBadgesRef = ref(database, 'users/' + userId + '/badges');
+
+            // Update user's points
+            update(userPointsRef, {
+                BeginnerLevel: score
+            }).then(() => {
+                console.log('Score updated successfully!');
+
+                // Award badge if the score is 80 or above
+                if (score >= 80) {
+                    update(userBadgesRef, {
+                        BeginnerBadge: true
+                    }).then(() => {
+                        console.log('Badge awarded successfully!');
+                    }).catch((error) => {
+                        console.error('Error updating badges: ', error);
+                    });
+                }
+            }).catch((error) => {
+                console.error('Error updating score: ', error);
+            });
+        } else {
+            console.log('No user is currently logged in');
+        }
+    }
+
+    // Add more questions here if needed
+    var correctAnswers = {
+        question1: "bulk",
+        question2: "telecommunication",
+        question3: "1996",
+        question4: "messages",
+        question5: "E-Gold",
+        question6: "2003",
+        question7: "phishing",
+        question8: "25%",
+        question9: "76%",
+        question10: "spoof"
+        // Add more questions and answers in the same format
+    };
+
+    $('form').submit(function(event) {
+    event.preventDefault();
+
+    var score = 0;
+
+    $.each(correctAnswers, function(question, answer) {
+        var userAnswer = $('#' + question).val().trim();
+
+        if (userAnswer.toLowerCase() === answer.toLowerCase()) {
+            score += 10;
+            $('#' + question).addClass('is-valid');
+            $('#' + question).removeClass('is-invalid');
+        } else {
+            $('#' + question).addClass('is-invalid');
+            $('#' + question).removeClass('is-valid');
+        }
+    });
+
+    const totalQuestions = Object.keys(correctAnswers).length;
+        let resultMessage = "You scored " + score + " out of " + (totalQuestions * 10) + ".";
+
+        if (score >= 80) {
+            resultMessage += " <br><br>➥ Congratulations! You've unlocked the next level! <br><br>➥ Congratulations! You've earned a badge!";
+            $('#badgeImage').attr('src', 'images/BeginnerBadge.png').show();
+        } else if (score >= 50) {
+            resultMessage += " <br><br>➥ Congratulations! You've unlocked the next level!";
+            $('#badgeImage').attr('src', 'images/NextLevelBadge.gif').show();
+        } else {
+            resultMessage += " <br><br>➥ Great effort! Try once more.";
+            $('#badgeImage').attr('src', 'images/TryAgainBadge.gif').show();
+        }
+
+        $('#scoreMessage').html(resultMessage);
+        $('#scoreModal').modal('show');
+
+        // Update points and badges in Firebase
+        updatePointsAndBadges(score);
+    });
+
+            // JavaScript to handle the click event of the Close button
+            document.getElementById('closeScoreModal').addEventListener('click', function() {
+                window.location.href = 'quizzes.html'; // Redirect to quizzes.html
+            });
+
+});
+
+function getProfileIconSrc(iconName) {
+    switch(iconName) {
+        case "Icon 1":
+            return "images/team-1.png";
+        case "Icon 2":
+            return "images/team-2.png";
+        case "Icon 3":
+            return "images/team-3.png";
+        default:
+            // Handle the case if the iconName is not recognized
+            return "images/defaultAvatar.jpg"; // You might want to return a default image path or handle this case differently based on your requirements
+    }
+}
+
+    // Logout function
+    function logout() {
+            auth.signOut().then(() => {
+                window.location.href = 'SignInOut.html'; // Redirect to login page
+            }).catch((error) => {
+                console.error('Sign Out Error', error);
+            });
+        }
+
+        // Attach logout function to the logout link
+        document.getElementById('logout-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            logout();
+        });
+
+
+    </script>
+    <script>
+            function goBack() {
+    window.location.href = 'quizzes.html';
+    }
+    </script>
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+    <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+    <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!-- Website Title -->
+    <title>PhishSecure</title>
+    <link href="css/signinout.css" rel="stylesheet">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<!-- Favicon  -->
+      <link rel="icon" href="images/logo.png">
+   </head>
+<body>
+  <div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <img src="images/intro-office.jpg" alt="">
+      </div>
+      <div class="back">
+        <img class="backImg" src="images/intro-office.jpg" alt="">
+      </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">Login</div>
+          <form action="#">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input id="email" type="text" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-eye" aria-hidden="true" id="eye"></i>
+                <input id="password" type="password" placeholder="Enter your password" required>
+              </div>
+              <div class="text"><a href="forgotpass.html">Forgot password?</a></div>
+              <div class="button input-box">
+                <input type="button" id="loginbtn" class="log-in" value="Submit">
+              </div>
+              <div class="text sign-up-text">Don't have an account? <label for="flip">SignUp now</label></div>
+            </div>
+                <!-- Add notification divs here -->
+            <div class="notification" id="incorrectPasswordNotification">
+            Incorrect password. Please try again.
+            </div>
+
+            <div class="notification" id="nonExistentEmailNotification">
+            Email doesn't exist. Please sign up first.
+            </div>
+
+            <div class="notification" id="invalidCredentialNotification">
+            Invalid credentials. Please check your email and password.
+            </div>
+        </form>
+      </div>
+        <div class="signup-form">
+          <div class="title">Signup</div>
+        <form action="#">
+            <div class="input-boxes">
+                <!-- Username -->
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" id="createUsername" placeholder="Enter your username" maxlength="8" required>
+              </div>
+              <!-- Email -->
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="text" id="createEmail" placeholder="Enter your email" required>
+              </div>
+              <!-- Password -->
+              <div class="input-box">
+                <i class="fas fa-eye" aria-hidden="true" id="createLock"></i>
+                <input type="password" id="createPassword" placeholder="Enter your password" required>
+              </div>
+              <!--Confirm Password -->
+              <div class="input-box">
+                <i class="fas fa-eye" aria-hidden="true" id="confirmLock"></i>
+                <input type="Password" id="confirmPassword" placeholder="Confirm your password" required>
+              </div>
+              <div id="passwordError" class="notification"></div> <!-- Add this line for password error message -->
+              <br>
+              
+              <p>Security Question <i class="fas fa-caret-down"></i></p>
+                 <div class="input-box">
+                    <i class="fas fa-key"></i>
+                    <input id="securityQ1" placeholder="Enter Mother's Name" required>
+                </div>
+                <div class="input-box">
+                     <i class="fas fa-key"></i>
+                     <input id="securityQ2" placeholder="Enter Father's Name" required>
+                </div>
+              <div class="button input-box">
+                <input id="signup" type="submit" value="Submit">
+              </div>
+              <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+            </div>
+            
+      </form>
+    </div>
+    </div>
+    </div>
+  </div>
+
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getDatabase, ref, update, set } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+    import { getAuth,onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+    // Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDPRVp-gibvlZ5VIUl4ZfBxBcOpA5fjatc",
+  authDomain: "phish-38fef.firebaseapp.com",
+  databaseURL: "https://phish-38fef-default-rtdb.firebaseio.com/",
+  projectId: "phish-38fef",
+  storageBucket: "phish-38fef.appspot.com",
+  messagingSenderId: "206566350425",
+  appId: "1:206566350425:web:2daec834375550dba55b48"
+};
+
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase();
+    const auth = getAuth();
+
+    // Get references to the email, password, and login button elements
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const loginBtn = document.getElementById('loginbtn');
+
+    // Function to create and display a notification popup
+    function showNotification(message) {
+      // Create a notification element
+      const notification = document.createElement('div');
+      notification.classList.add('notification');
+      notification.textContent = message;
+
+      // Append the notification to the document body
+      document.body.appendChild(notification);
+
+      // Remove the notification after a certain duration
+      setTimeout(() => {
+          notification.remove();
+      }, 3000); // Remove after 3 seconds (adjust as needed)
+    }
+
+    // Update the handleLoginError function to use the showNotification function
+    function handleLoginError(errorCode) {
+      const incorrectPasswordNotification = document.getElementById('incorrectPasswordNotification');
+      const nonExistentEmailNotification = document.getElementById('nonExistentEmailNotification');
+      const invalidCredentialNotification = document.getElementById('invalidCredentialNotification');
+
+      // Hide all notifications initially
+      incorrectPasswordNotification.style.display = 'none';
+      nonExistentEmailNotification.style.display = 'none';
+      invalidCredentialNotification.style.display = 'none';
+
+      // Show specific notification based on error code
+      if (errorCode === 'auth/wrong-password') {
+          showNotification('Incorrect password. Please try again.');
+            incorrectPasswordNotification.style.display = 'block';
+        } else if (errorCode === 'auth/user-not-found') {
+            showNotification('Email doesn\'t exist. Please sign up first.');
+            nonExistentEmailNotification.style.display = 'block';
+        } else if (errorCode === 'auth/invalid-credential') {
+            showNotification('Invalid credentials. Please check your email and password.');
+            invalidCredentialNotification.style.display = 'block';
+        }
+      }
+
+      // Add a click event listener to the login button
+      loginBtn.addEventListener('click', () => {
+          const email = emailInput.value;
+          const password = passwordInput.value;
+
+          // Sign in with Firebase
+          signInWithEmailAndPassword(auth, email, password)
+              .then((userCredential) => {
+                  const user = userCredential.user;
+                  const userId = user.uid;
+
+                  // User is signed in
+                  console.log("User is logged in:", userId);
+
+                  // Update data in the Realtime Database
+                  const userRef = ref(database, 'users/' + userId);
+
+                  // Update the 'LoginTime' with new data
+                  update(userRef, {
+                      LoginTime: new Date().toISOString()
+                  })
+                  .then(() => {
+                      console.log('Data updated successfully');
+                      window.location.href = 'dashboard.html';
+                  })
+                  .catch((error) => {
+                      console.error('Error updating data:', error.message);
+                  });
+              })
+              .catch((error) => {
+                  console.error('Login error:', error.message);
+                  handleLoginError(error.code); // Call function to handle login errors
+              });
+      });
+
+      function togglePasswordVisibility() {
+          const passwordInput = document.getElementById("password");
+          const passwordToggle = document.querySelector("#eye");
+
+          passwordToggle.addEventListener("click", function () {
+              if (passwordInput.type === "password") {
+                  passwordInput.type = "text";
+                  passwordToggle.classList.remove("fa-eye");
+                  passwordToggle.classList.add("fa-eye-slash");
+              } else {
+                  passwordInput.type = "password";
+                  passwordToggle.classList.remove("fa-eye-slash");
+                  passwordToggle.classList.add("fa-eye");
+              }
+          });
+      }
+
+      togglePasswordVisibility();
+
+      function togglePasswordVisibility1() {
+          const passwordInput = document.getElementById("createPassword");
+          const passwordToggle = document.querySelector("#createLock");
+
+          passwordToggle.addEventListener("click", function () {
+              if (passwordInput.type === "password") {
+                  passwordInput.type = "text";
+                  passwordToggle.classList.remove("fa-eye");
+                  passwordToggle.classList.add("fa-eye-slash");
+              } else {
+                  passwordInput.type = "password";
+                  passwordToggle.classList.remove("fa-eye-slash");
+                  passwordToggle.classList.add("fa-eye");
+              }
+          });
+      }
+
+      togglePasswordVisibility1();
+
+
+      function togglePasswordVisibility2() {
+          const passwordInput = document.getElementById("confirmPassword");
+          const passwordToggle = document.querySelector("#confirmLock");
+
+          passwordToggle.addEventListener("click", function () {
+              if (passwordInput.type === "password") {
+                  passwordInput.type = "text";
+                  passwordToggle.classList.remove("fa-eye");
+                  passwordToggle.classList.add("fa-eye-slash");
+              } else {
+                  passwordInput.type = "password";
+                  passwordToggle.classList.remove("fa-eye-slash");
+                  passwordToggle.classList.add("fa-eye");
+              }
+          });
+      }
+
+      togglePasswordVisibility2();
+
+      document.addEventListener("DOMContentLoaded", function() {
+          const questionToggle = document.querySelector(".security-question-toggle");
+          const questions = document.querySelector(".security-questions");
+          let isVisible = false; // Track the visibility state
+
+          // Function to toggle visibility
+          function toggleVisibility() {
+              isVisible = !isVisible; // Toggle the state
+              questions.classList.toggle("visible", isVisible); // Add or remove the 'visible' class based on state
+          }
+
+          // Initially hide the questions
+          questions.classList.remove("visible");
+
+          // Toggle visibility when clicked
+          questionToggle.addEventListener("click", toggleVisibility);
+      });
+
+      // SignUp Javascript
+      // SignUp Javascript
+      // SignUp Javascript
+
+// Function to validate passwords and other fields
+function validatePassword(event) {
+    event.preventDefault(); // Prevent default form submission behavior
+
+    const passwordInput = document.getElementById("createPassword");
+    const confirmPasswordInput = document.getElementById("confirmPassword");
+    const passwordError = document.getElementById("passwordError");
+
+    const createPassword = passwordInput.value;
+    const confirmPassword = confirmPasswordInput.value;
+
+    // Basic validation for empty fields
+    const username = document.getElementById('createUsername').value;
+    const email = document.getElementById('createEmail').value;
+    const securityQuestion1 = document.getElementById('securityQ1').value;
+    const securityQuestion2 = document.getElementById('securityQ2').value;
+    const errorMessage = document.getElementById('errorMessage');
+
+    if (!email || !createPassword || !username || !securityQuestion1 || !securityQuestion2) {
+        alert('All fields are required. Please fill out the form completely.');
+        return;
+    }
+
+    if (createPassword === confirmPassword) {
+        // Passwords match, clear any previous error message
+        passwordError.innerText = "";
+        // Proceed with saving user data
+        saveUserData(username, email, createPassword, securityQuestion1, securityQuestion2);
+    } else {
+        // Passwords don't match, show error message
+        alert("Confirmation passwords do not match! Please ensure both passwords are the same.");
+    }
+}
+
+// Function to save user data
+function saveUserData(username, email, password, securityQuestion1, securityQuestion2) {
+    const signupButton = document.getElementById('signup');
+    const errorMessage = document.getElementById('errorMessage');
+
+    // Show loading indicator
+    // Disable submit button
+    signupButton.disabled = true;
+
+    createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Hide loading indicator
+            // Re-enable submit button
+            signupButton.disabled = false;
+
+            const user = userCredential.user;
+            const uid = user.uid; // Get the UID from the authenticated user
+
+            const userData = {
+                username: username,
+                email: email,
+                password: password,
+                uid: uid,
+                securityQuestion1: securityQuestion1,
+                securityQuestion2: securityQuestion2,
+                creationTimestamp: Date.now() // Add creation timestamp
+            };
+
+            // Reference to the users node in the Realtime Database
+            const usersRef = ref(database, 'users/' + uid);
+
+            // Set the user data in the Realtime Database
+            set(usersRef, userData)
+                .then(() => {
+                    alert('User created! Welcome ' + username);
+                })
+                .catch((dbError) => {
+                    alert('Error saving user data: ' + dbError.message);
+                });
+        })
+        .catch((authError) => {
+            // Hide loading indicator
+            // Re-enable submit button
+            signupButton.disabled = false;
+            
+            const errorMessage = authError.message;
+
+            // Friendly error messages
+            if (errorMessage.includes('auth/email-already-in-use')) {
+                alert('The email address is already in use by another account.');
+            } else if (errorMessage.includes('auth/invalid-email')) {
+                alert('The email address is not valid.');
+            } else if (errorMessage.includes('auth/weak-password')) {
+                alert('The password is too weak. Please write a stronger password.');
+            } else if (errorMessage.includes('auth/missing-email')) {
+                alert('The email field is required.');
+            } else if (errorMessage.includes('auth/missing-password')) {
+                alert('The password field is required.');
+            } else {
+                alert('Error: ' + errorMessage);
+            }
+        });
+}
+
+// Add event listener to the signup button
+document.getElementById('signup').addEventListener('click', validatePassword);
+
+    </script>
+  </body>
+</html>

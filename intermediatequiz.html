@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>PhishSecure</title>
+    
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+	<link href="css/magnific-popup.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="images/logo.png">
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+    
+    <!-- Preloader -->
+	<div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+    
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
+
+        <!-- Image Logo -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="username-link"  style="color:rgb(13, 164, 190)" > </a>
+            </li>
+            </ul>
+            <a class="navbar-brand logo-image" href="profile.html"><img id="avatar" src="images/defaultAvatar.jpg" class="avatar"></a>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-awesome fas fa-bars"></span>
+                <span class="navbar-toggler-awesome fas fa-times"></span>
+            </button>
+            <!-- end of mobile menu toggle button -->
+    
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="dashboard.html">DASHBOARD</a>
+                    </li>
+                    <!-- Dropdown Menu -->          
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle page-scroll" href="course.html" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">PHISHING</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item page-scroll" href="course.html#intro"><span class="item-text">INTRODUCTION</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item page-scroll" href="course.html#history"><span class="item-text">HISTORY</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item page-scroll" href="course.html#types"><span class="item-text">TYPES</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item page-scroll" href="course.html#preventions"><span class="item-text">PREVENTIONS</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item page-scroll" href="course.html#footer"><span class="item-text">CREDIT</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                        </div>
+                    </li>
+                    <!-- end of dropdown menu -->
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="quizzes.html">QUIZZES</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="profile.html">PROFILE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="leaderboard.html">LEADERBOARD</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link page-scroll" href="SignInOut.html" id="logout-link">LOGOUT</a>
+                </li>
+                </ul>
+            </div>
+        </nav> <!-- end of navbar -->
+        <!-- end of navbar -->
+
+
+        <div class="intercontainer">
+            <h1>Phishing Quiz<br> (Intermediate's Level)</h1>
+            <p>This quiz level features questions on various types of phishing and examples from the phishing course. Select the correct answer for each yes or no question!</p>
+            <form id="quiz-form" class="qform">
+                <div class="question">
+                    <p>1. Is spear phishing a targeted method used by cybercriminals to steal information by impersonating trusted sources?</p>
+                    <div class="inputGroup">
+                        <input id="radio1_q1" name="question1" type="radio" value="yes"/>
+                        <label for="radio1_q1">Yes</label>
+                      </div>
+                      <div class="inputGroup">
+                        <input id="radio2_q1" name="question1" type="radio" value="no"/>
+                        <label for="radio2_q1">No</label>
+                      </div>
+                    <p class="answer"></p>
+                </div>
+
+                <div class="question">
+                    <p>2. Would an email that appears to be from university administrators asking students to confirm their login credentials typically be a legitimate request for verification?</p>
+                    <div class="inputGroup">
+                        <input id="radio1_q2" name="question2" type="radio" value="yes"/>
+                        <label for="radio1_q2">Yes</label>
+                      </div>
+                      <div class="inputGroup">
+                        <input id="radio2_q2" name="question2" type="radio" value="no"/>
+                        <label for="radio2_q2">No</label>
+                      </div>
+                    <p class="answer"></p>
+                </div>
+
+                <div class="question">
+                    <p>3. Does clone phishing involve replicating legitimate branded emails to deceive recipients into clicking malicious links or attachments? </p>
+                    <div class="inputGroup">
+                        <input id="radio1_q3" name="question3" type="radio" value="yes"/>
+                        <label for="radio1_q3">Yes</label>
+                      </div>
+                      <div class="inputGroup">
+                        <input id="radio2_q3" name="question3" type="radio" value="no"/>
+                        <label for="radio2_q3">No</label>
+                      </div>
+                    <p class="answer"></p>
+                </div>
+
+                <div class="question">
+                    <p>4. Does website spoofing rely on fraudulent websites to trick users into sharing private information? </p>
+                    <div class="inputGroup">
+                        <input id="radio1_q4" name="question4" type="radio" value="yes"/>
+                        <label for="radio1_q4">Yes</label>
+                      </div>
+                      <div class="inputGroup">
+                        <input id="radio2_q4" name="question4" type="radio" value="no"/>
+                        <label for="radio2_q4">No</label>
+                      </div>
+                    <p class="answer"></p>
+                </div>
+
+                <div class="question">
+                    <p>5. Is receiving two identical emails with slight variations in the sender’s email address a sign of a legitimate communication from a trusted source? </p>
+                    <div class="inputGroup">
+                        <input id="radio1_q5" name="question5" type="radio" value="yes"/>
+                        <label for="radio1_q5">Yes</label>
+                      </div>
+                      <div class="inputGroup">
+                        <input id="radio2_q5" name="question5" type="radio" value="no"/>
+                        <label for="radio2_q5">No</label>
+                      </div>
+                    <p class="answer"></p>
+                </div>
+
+                <div class="question">
+                    <p>6. Is it safe to complete your purchase on a website that has blurry images and grammatical errors, even if it uses the branding of a well-known store? </p>
+                    <div class="inputGroup">
+                        <input id="radio1_q6" name="question6" type="radio" value="yes"/>
+                        <label for="radio1_q6">Yes</label>
+                      </div>
+                      <div class="inputGroup">
+                        <input id="radio2_q6" name="question6" type="radio" value="no"/>
+                        <label for="radio2_q6">No</label>
+                      </div>
+                    <p class="answer"></p>
+                </div>
+
+                <div class="question">
+                    <p>7. Does pop-up phishing leverage adware and pop-up ads to deceive users into downloading malware onto their devices?</p>
+                    <div class="inputGroup">
+                        <input id="radio1_q7" name="question7" type="radio" value="yes"/>
+                        <label for="radio1_q7">Yes</label>
+                      </div>
+                      <div class="inputGroup">
+                        <input id="radio2_q7" name="question7" type="radio" value="no"/>
+                        <label for="radio2_q7">No</label>
+                      </div>
+                    <p class="answer"></p>
+                </div>
+
+                <div class="question">
+                    <p>8. Are fake virus alerts and scare tactics commonly used in pop-up phishing attacks to manipulate users into clicking without thinking? </p>
+                    <div class="inputGroup">
+                        <input id="radio1_q8" name="question8" type="radio" value="yes"/>
+                        <label for="radio1_q8">Yes</label>
+                      </div>
+                      <div class="inputGroup">
+                        <input id="radio2_q8" name="question8" type="radio" value="no"/>
+                        <label for="radio2_q8">No</label>
+                      </div>
+                    <p class="answer"></p>
+                </div>
+
+                <div class="question">
+                    <p>9. Is pop-up phishing a harmless advertising technique used by businesses to attract customers?</p>
+                    <div class="inputGroup">
+                        <input id="radio1_q9" name="question9" type="radio" value="yes"/>
+                        <label for="radio1_q9">Yes</label>
+                      </div>
+                      <div class="inputGroup">
+                        <input id="radio2_q9" name="question9" type="radio" value="no"/>
+                        <label for="radio2_q9">No</label>
+                      </div>
+                    <p class="answer"></p>
+                </div>
+
+                <div class="question">
+                    <p>10. Is it safe to enter your personal information and download antivirus software from a pop-up warning that your device is infected with a virus? </p>
+                    <div class="inputGroup">
+                        <input id="radio1_q10" name="question10" type="radio" value="yes"/>
+                        <label for="radio1_q10">Yes</label>
+                      </div>
+                      <div class="inputGroup">
+                        <input id="radio2_q10" name="question10" type="radio" value="no"/>
+                        <label for="radio2_q10">No</label>
+                      </div>
+                    <p class="answer"></p>
+                </div>
+        
+                <!-- Add more questions here -->
+        
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <!-- Back Button -->
+            <button class="btn btn-secondary" onclick="goBack()">Back</button>
+        </div>
+
+                <!-- Score Modal -->
+                <div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="scoreModalLabel">Quiz Result</h5>
+                            </div>
+                            <div class="modal-body">
+                                <img id="badgeImage" src="" alt="Badge Image" class="badgeimg">
+                                <p id="scoreMessage" class="scoreMessage" ></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button id="closeScoreModal" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    <!-- Footer -->
+    <div id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-container about">
+                        <h4>Credit</h4>
+                        <p class="white">Information from this phishing LMS was sourced from several websites. We acknowledge the valuable insights and resources provided by these sources in the development of this course. Special thanks for their contributions go to: </p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-md-2">
+                    <div class="text-container">
+                        <h4>Links</h4>
+                        <ul class="list-unstyled li-space-lg white">
+                            <li>
+                                <a class="white" href="https://www.phishing.org/history-of-phishing">www.phishing.org</a>
+                            </li>
+                            <li>
+                                <a class="white" href="https://us.norton.com/blog/online-scams/types-of-phishing">us.norton.com</a>
+                            </li>
+                            <li>
+                                <a class="white" href="https://www.knowbe4.com/phishing#4">www.knowbe4.com</a>
+                            </li>
+                            <li>
+                                <a class="white" href="https://www.slideshare.net/AniketPandit18/phishing-attack-seminar-presentation">www.slideshare.net</a>
+                            </li>
+                        </ul>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
+
+    
+    	
+    <!-- Scripts -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        import { getDatabase, ref, onValue, update } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+    
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+  apiKey: "AIzaSyDPRVp-gibvlZ5VIUl4ZfBxBcOpA5fjatc",
+  authDomain: "phish-38fef.firebaseapp.com",
+  databaseURL: "https://phish-38fef-default-rtdb.firebaseio.com/",
+  projectId: "phish-38fef",
+  storageBucket: "phish-38fef.appspot.com",
+  messagingSenderId: "206566350425",
+  appId: "1:206566350425:web:2daec834375550dba55b48"
+};
+    
+         // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase();
+    const auth = getAuth();
+    const usernameLink = document.querySelector('.username-link');
+
+// Check if the user is authenticated
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        // User is signed in
+        const userId = user.uid;
+        console.log("User is logged in:", userId);
+
+        // Fetch user information from the database using the current user's ID
+        const userRef = ref(database, 'users/' + userId);
+        onValue(userRef, (snapshot) => {
+            const userData = snapshot.val();
+            displayUserInfo(userData);
+            document.getElementById('avatar').src = getProfileIconSrc(userData.profileIcon);
+
+        });
+    } else {
+        console.log("No user is currently logged in");
+    }
+});
+
+function displayUserInfo(userData) {
+    // Display user information on the page
+    if (userData) {
+        usernameLink.textContent = userData.username ; // Display username in the navigation
+    } else {
+        console.log('User data not available');
+    }
+}
+
+$(document).ready(function() {
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+  apiKey: "AIzaSyDPRVp-gibvlZ5VIUl4ZfBxBcOpA5fjatc",
+  authDomain: "phish-38fef.firebaseapp.com",
+  databaseURL: "https://phish-38fef-default-rtdb.firebaseio.com/",
+  projectId: "phish-38fef",
+  storageBucket: "phish-38fef.appspot.com",
+  messagingSenderId: "206566350425",
+  appId: "1:206566350425:web:2daec834375550dba55b48"
+};
+
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase();
+    const auth = getAuth();
+
+    // Update points and badges in Firebase
+    function updatePointsAndBadges(score) {
+        const user = auth.currentUser;
+        if (user) {
+            const userId = user.uid;
+            const userPointsRef = ref(database, 'users/' + userId + '/points');
+            const userBadgesRef = ref(database, 'users/' + userId + '/badges');
+
+            // Update user's points
+            update(userPointsRef, {
+                IntermediateLevel: score
+            }).then(() => {
+                console.log('Score updated successfully!');
+
+                // Award badge if the updated score is 80 or above
+                if (score >= 80) { // Adjusted the condition to check if the updated score is 80 or above
+                    update(userBadgesRef, {
+                        IntermediateBadge: true
+                    }).then(() => {
+                        console.log('Badge awarded successfully!');
+                    }).catch((error) => {
+                        console.error('Error updating badges: ', error);
+                    });
+                }
+            }).catch((error) => {
+                console.error('Error updating score: ', error);
+            });
+        } else {
+            console.log('No user is currently logged in');
+        }
+    }
+
+    // Handle form submission
+    $('#quiz-form').submit(function(event) {
+        event.preventDefault();
+
+        var answers = {
+            "question1": "yes",
+            "question2": "no",
+            "question3": "yes",
+            "question4": "yes",
+            "question5": "no",
+            "question6": "no",
+            "question7": "yes",
+            "question8": "yes",
+            "question9": "no",
+            "question10": "no"
+            // Add more questions and answers here
+        };
+
+        var score = 0;
+
+        // Iterate through each question
+        $.each(answers, function(question, correctAnswer) {
+            // Get the selected answer for each question
+            var selectedAnswer = $("input[name='" + question + "']:checked").val();
+
+            // Check if the selected answer matches the correct answer
+            if (selectedAnswer === correctAnswer) {
+                score += 10; // Increase the score by 10 for each correct answer
+                $("#" + question + " + .answer").text("Correct!").addClass("correct");
+            } else {
+                $("#" + question + " + .answer").text("Wrong!").addClass("wrong");
+            }
+        });
+
+        // Display the total score
+        var totalScore = Object.keys(answers).length * 10; // Maximum possible score
+        var resultMessage = "You scored " + score + " out of " + totalScore + ".";
+
+        if (score >= 80) {
+            resultMessage += " <br><br>➥ Congratulations! You've unlocked the next level! <br><br>➥ Congratulations! You've earned a badge!";
+            $('#badgeImage').attr('src', 'images/IntermediateBadge.png').show();
+        } else if (score >= 50) {
+            resultMessage += " <br><br>➥ Congratulations! You've unlocked the next level!";
+            $('#badgeImage').attr('src', 'images/NextLevelBadge.gif').show();
+        } else {
+            resultMessage += " <br><br>➥ Great effort! Try once more.";
+            $('#badgeImage').attr('src', 'images/TryAgainBadge.gif').show();
+        }
+
+        $('#scoreMessage').html(resultMessage);
+        $('#scoreModal').modal('show');
+
+        // Update points and badges in Firebase
+        updatePointsAndBadges(score);
+    });
+
+            // JavaScript to handle the click event of the Close button
+            document.getElementById('closeScoreModal').addEventListener('click', function() {
+                window.location.href = 'quizzes.html'; // Redirect to quizzes.html
+            });
+    });
+
+    function getProfileIconSrc(iconName) {
+    switch(iconName) {
+        case "Icon 1":
+            return "images/team-1.png";
+        case "Icon 2":
+            return "images/team-2.png";
+        case "Icon 3":
+            return "images/team-3.png";
+        default:
+            // Handle the case if the iconName is not recognized
+            return "images/defaultAvatar.jpg"; // You might want to return a default image path or handle this case differently based on your requirements
+    }
+}
+
+    // Logout function
+    function logout() {
+            auth.signOut().then(() => {
+                window.location.href = 'SignInOut.html'; // Redirect to login page
+            }).catch((error) => {
+                console.error('Sign Out Error', error);
+            });
+        }
+
+        // Attach logout function to the logout link
+        document.getElementById('logout-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            logout();
+        });
+    </script>
+
+    <script>
+    function goBack() {
+    window.location.href = 'quizzes.html';
+    }
+    </script>
+
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+    <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+    <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+</html>

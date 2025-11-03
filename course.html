@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Website Title -->
+    <title>PhishSecure</title>
+    
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+	<link href="css/magnific-popup.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="images/logo.png">
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+    
+    <!-- Preloader -->
+	<div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+    
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
+
+        <!-- Image Logo -->
+        <!-- Image Logo -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="username-link" style="color:white" ></a>
+            </li>
+        </ul>
+            <a class="navbar-brand logo-image" href="index.html"><img id="avatar" src="images/defaultAvatar.jpg" class="avatar"></a>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+        <!-- end of mobile menu toggle button -->
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="dashboard.html">DASHBOARD</a>
+                </li>
+                <!-- Dropdown Menu -->          
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="course.html" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">PHISHING</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item page-scroll" href="#intro"><span class="item-text">INTRODUCTION</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item page-scroll" href="#history"><span class="item-text">HISTORY</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item page-scroll" href="#types"><span class="item-text">TYPES</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item page-scroll" href="#preventions"><span class="item-text">PREVENTIONS</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item page-scroll" href="#footer"><span class="item-text">CREDIT</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                    </div>
+                </li>
+                <!-- end of dropdown menu -->
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="quizzes.html">QUIZZES</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="profile.html">PROFILE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="leaderboard.html">LEADERBOARD</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link page-scroll" href="login.html" id="logout-link">LOGOUT</a>
+            </li>
+            </ul>
+        </div>
+    </nav> <!-- end of navbar -->
+    <!-- end of navbar -->
+
+
+    <!-- Header -->
+    <header id="header" class="cheader">
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-container">
+                            <h1>PHISHING COURSE</h1>
+                            <p class="p-heading p-large">Confirm your progress for each of the section after you have finished each section</p>
+                            <a class="btn-solid-lg page-scroll" href="#intro">START NOW</a>
+                        </div>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of header-content -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+<!-- Progress Display -->
+<div id="progress-display"></div>
+    <!-- Intro -->
+    <div id="intro" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="text-container">
+                        <div class="section-title">INTRODUCTION</div>
+                        <h2>What Is Phishing?</h2>
+                        <p>Phishing is the process of attempting to acquire sensitive information such as
+                            usernames,
+                            passwords and credit card details by masquerading as a trustworthy entity using <u><b>bulk</b></u> email which
+                            tries
+                            to evade spam filters.
+                            <br>
+                            <br>
+                            Emails claiming to be from popular social web sites, banks, auction sites, or IT administrators are
+                            commonly used to lure the unsuspecting public. It's a form of criminally fraudulent social
+                            engineering.</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-7">
+                    <div class="image-container">
+                        <video width="600" height="400" controls>
+                            <source src="images/Phishing Explained In 6 Minutes.mp4" type="video/mp4">
+                        </video>
+                        <p>Source: https://youtu.be/XBkzBrXlle0</p>
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+        <div class="courseprogress">
+        <p>Click the button to confirm your progress for this section <button class="progress-button btn btn-info" data-section="intro">Confirm Progress</button></p>
+    </div>
+    </div> <!-- end of basic-1 -->
+    <!-- end of intro -->
+
+
+
+    
+
+    <!-- History 1 -->
+	<div id="history" class="accordion">
+		<div class="area-1">
+		</div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2">
+            
+            <!-- Accordion -->
+            <div class="accordion-container" id="accordionOne">
+                <h2>History of Phishing</h2>
+                <div class="item">
+                    <div id="headingOne">
+                        <span data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" role="button">
+                            <span class="circle-numbering">1</span><span class="accordion-title">Name Origins</span>
+                        </span>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionOne">
+                        <div class="accordion-body">
+                            "Phishing" is used to describe scams, with "ph" linking it to early hackers called "phreaks" who studied <u><b>telecommunication</b></u> systems. This spelling connects phishing scams to the underground hacker community.
+                        </div>
+                    </div>
+                </div> <!-- end of item -->
+            
+                <div class="item">
+                    <div id="headingTwo">
+                        <span class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" role="button">
+                            <span class="circle-numbering">2</span><span class="accordion-title">First Recorded Mention</span>
+                        </span>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionOne">
+                        <div class="accordion-body">
+                            According to Internet records, the first time that the term “phishing” was used and recorded was on January 2, <u><b>1996</b></u>. The mention occurred in a Usenet newsgroup called AOHell. It is fitting that it was made there too; America Online is where the first rumblings of what would become a major criminal issue would take place.
+                        </div>
+                    </div>
+                </div> <!-- end of item -->
+            
+                <div class="item">
+                    <div id="headingThree">
+                        <span class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" role="button">
+                            <span class="circle-numbering">3</span><span class="accordion-title">Phishing’s America Online Origins</span>
+                        </span>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionOne">
+                        <div class="accordion-body">
+                            Back when America Online (AOL) was the number-one provider of Internet access, millions of people logged on to the service each day. Its popularity made it a natural choice for those who had less than pure motives. From the beginning, hackers and those who traded pirated software used the service to communicate with one another.
+                        </div>
+                    </div>
+                </div> <!-- end of item -->
+
+                <div class="item">
+                    <div id="headingFour">
+                        <span class="collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" role="button">
+                            <span class="circle-numbering">4</span><span class="accordion-title">Phishing Attacks Begin</span>
+                        </span>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionOne">
+                        <div class="accordion-body">
+                            With their random credit card number generating racket shut down, phishers created what would become a very common and enduring set of techniques. Through the AOL instant messenger and email systems, they would send <u><b>messages</b></u> to users while posing as AOL employees.
+                        </div>
+                    </div>
+                </div> <!-- end of item -->
+            </div> <!-- end of accordion-container -->
+            <!-- end of accordion -->
+
+		</div> <!-- end of area-2 -->
+    </div> <!-- end of accordion -->
+    <!-- end of details 1 -->
+
+
+    <!-- history 2 -->
+	<div id="history2" class="tabs">
+        <div class="area-1">
+            <div class="tabs-container">
+                
+                <!-- Tabs Links -->
+                <ul class="nav nav-tabs" id="ariaTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-th"></i> 2000s</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav-tab-2" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false"><i class="fas fa-th"></i> 2010s</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav-tab-3" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false"><i class="fas fa-th"></i> 2020s</a>
+                    </li>
+                </ul>
+                <!-- end of tabs links -->
+                
+                <!-- Tabs Content -->
+                <div class="tab-content" id="ariaTabsContent">
+
+                    <!-- Tab -->
+                    <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+                        <h4>Beginnings of Email Phishing</h4>
+                        <p>In 2001, phishers began exploiting online payment systems. The first attack was on <u><b>E-Gold</b></u> in June 2001</p>
+                        
+                        <!-- Progress Bars -->
+                        <div class="progress-container">
+                            <div class="title">2003</div>
+                            <p>the first known phishing attack against a bank was reported by The Banker in September <u><b>2003</b></u>.</p>
+                            
+                            <div class="title">May 2004 and May 2005</div>
+                            <p>1.2 million computer users in the United States suffered losses caused by <u><b>phishing</b></u>, totaling approximately US $929 million.</p>
+                            
+                            <div class="title">2009</div>
+                            <p>the US and China hosting more than <u><b>25%</b></u> of the phishing sites each.</p>
+                            
+                        </div> <!-- end of progress-container -->
+                        <!-- end of progress bars -->
+                        
+                    </div> <!-- end of tab-pane --> 
+                    <!-- end of tab -->
+
+                    <!-- Tab -->
+                    <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
+                        <ul class="list-unstyled li-space-lg first">
+                            <li class="media">
+                                <div class="media-bullet">1</div>
+                                <div class="media-body"><strong>In March 2011,</strong> Internal RSA staff were successfully phished</div>
+                            </li>
+                            <li class="media">
+                                <div class="media-bullet">2</div>
+                                <div class="media-body"><strong>In August 2013,</strong> advertising platform Outbrain became a victim of spear phishing</div>
+                            </li>
+                            <li class="media">
+                                <div class="media-bullet">3</div>
+                                <div class="media-body"><strong>In August 2014,</strong> iCloud leaked almost 500 private celebrity photos, many containing nudity.</div>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled li-space-lg last">
+                            <li class="media">
+                                <div class="media-bullet">4</div>
+                                <div class="media-body"><strong>In 2017,</strong> <u><b>76%</b></u> of organizations experienced phishing attacks.</div>
+                            </li>
+                            <li class="media">
+                                <div class="media-bullet">5</div>
+                                <div class="media-body"><strong>In 2018,</strong> Under Armour's health and fitness-tracking app, MyFitnessPal, was hit by a data breach. </div>
+                            </li>
+                            <li class="media">
+                                <div class="media-bullet">6</div>
+                                <div class="media-body"><strong>According to Microsoft,</strong> 250% rise in phishing attacks over the course of 2018</div>
+                            </li>
+                        </ul>
+                    </div> <!-- end of tab-pane -->
+                    <!-- end of tab -->
+
+                    <!-- Tab -->
+                    <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
+                        
+                        <p><strong>Using Google Drive,</strong> Scammers have been observed abusing a Google Drive feature to send phishing links in automated email notifications from Google.</p>
+                        <p><strong>According to Microsoft,</strong> here are some of the innovative ways they’ve seen phishing attacks evolve from 2019 to 2020:</p>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Pointing email links to fake google search results that point to attacker-controlled malware-laden websites</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">pointing email links to non-existent pages on an attacker-controlled website so that a custom 404 page is presented that can be used to <u><b>spoof</b></u> logon pages for legitimate sites</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">spoofing company-specific Office 365 sign-in pages to look so realistic that users would give the logon page a second thought.</div>
+                            </li>
+                        </ul>
+                    </div> <!-- end of tab-pane -->
+                    <!-- end of tab -->
+
+                </div> <!-- end of tab-content -->
+                <!-- end of tabs content -->
+
+            </div> <!-- end of tabs-container -->
+        </div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2"></div> <!-- end of area-2 -->
+        <div class="courseprogress">
+            <p>Click the button to confirm your progress for this section <button class="progress-button btn btn-info" data-section="history2">Confirm Progress</button></p>
+        </div>
+        <div class="quizlink">
+            <p>Congratulation!! you have completed 40% of the course. Click here to take Beginner Level Quiz<br><br><button class="btn btn-success" onclick="goQuiz()">Start</button></p>
+        </div>
+    </div> <!-- end of tabs -->
+    <!-- end of details 2 -->
+<br><br><br><br><br><br>
+
+    <!-- types -->
+	<div id="types" class="filter">
+		<div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">PHISHING TYPES</div>
+                    <h2>This is the common types in phishing</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+                   
+                    <div class="grid">
+                        <div class="element-item development" style="border: 3px solid black;">
+                            <a class="popup-with-move-anim" href="#type-1"><div class="element-item-overlay"><span>Spear Phishing <p style="color:white">Click to read more</p></span></div><img src="images/spearphishing.png" alt="alternative"></a>
+                        </div>
+                        <div class="element-item development" style="border: 3px solid black;">
+                            <a class="popup-with-move-anim" href="#type-2"><div class="element-item-overlay"><span>Clone Phishing <p style="color:white">Click to read more</p></span></div><img src="images/clonePhishing.png" alt="alternative"></a>
+                        </div>
+                        <div class="element-item design development marketing"style="border: 3px solid black;">
+                            <a class="popup-with-move-anim" href="#type-3"><div class="element-item-overlay"><span>Website spoofing <p style="color:white">Click to read more</p></span></div><img src="images/websiteSpoofing.png" alt="alternative"></a>
+                        </div>
+                        <div class="element-item design development marketing"style="border: 3px solid black;">
+                            <a class="popup-with-move-anim" href="#type-4"><div class="element-item-overlay"><span>Pop-up Phishing <p style="color:white">Click to read more</p></span></div><img src="images/popupPhishing.png" alt="alternative"></a>
+                        </div>
+                    </div> <!-- end of grid -->
+                    <!-- end of filter -->
+                    
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+		</div> <!-- end of container -->
+        <div class="courseprogress">
+            <p>Click the button to confirm your progress for this section <button class="progress-button btn btn-info" data-section="types">Confirm Progress</button></p>
+        </div>
+        <div class="quizlink">
+            <p>Congratulation!! you have completed 60% of the course. Click here to take Intermediate Level Quiz<br><br><button class="btn btn-success" onclick="goQuiz()">Start</button></p>
+        </div>
+    </div> <!-- end of filter -->
+    <!-- end of projects -->
+
+
+    <!-- Project Lightboxes -->
+    <!-- Lightbox -->
+    <div id="type-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="images/spearphishing.png" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>Spear Phishing</h3>
+                <hr class="line-heading">
+                <h6>What is Spear Phishing?</h6>
+                <p>Spear phishing is a targeted phishing method that cybercriminals use to steal your information by impersonating a trusted source.</p>
+                <p>they get the information they want, they may use it for malicious purposes such as identity theft.</p>
+                <div class="testimonial-container">
+                    <p class="testimonial-text">An example of this would be a phishing email targeting an university students by pretending to be their university administrators. In the email, the scammer may try to get the students to give up private information that the scammer can later  use to their advantage.</p>
+                </div>
+                <a class="btn-outline-reg mfp-close as-button page-scroll" href="#types">BACK</a> 
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+
+    <!-- Lightbox -->
+    <div id="type-2" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="images/clonePhishing.png" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>Clone Phishing</h3>
+                <hr class="line-heading">
+                <h6>What is Clone Phishing?</h6>
+                <p>A clone phishing attack is when a scammer attempts to replicate a legitimate branded email you may have already received while sneaking in a malicious link or attachment.</p>
+                <p>In some cases, the cloned email may contain something like “resending” or “sending this again” to make you think that it is from the original sender.</p>
+                <div class="testimonial-container">
+                    <p class="testimonial-text">An example of clone phishing is receiving an email twice, but with one of them coming from a slightly different email address. For example, you receive two identical emails, one from “support@amazon.com” and the other from “supp0rt@amazon.co.” </p>
+                </div>
+                <a class="btn-outline-reg mfp-close as-button page-scroll" href="#types">BACK</a> 
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+
+    <!-- Lightbox -->
+    <div id="type-3" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="images/websiteSpoofing.png" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>Website Spoofing</h3>
+                <hr class="line-heading">
+                <h6>What is Website Spoofing?</h6>
+                <p>Most phishing attacks try to get you to share your private information, and website spoofing is no exception.</p>
+                <p>Website spoofing is a type of cyberattack that relies on fraudulent websites. If you end up on one of these sites,  you could lose your identity or damage your device. </p>
+                <div class="testimonial-container">
+                    <p class="testimonial-text">Let’s say you’re looking to buy a basketball jersey online. After searching around, you finally find the one you want. While going through the checkout process, you notice that the website seems a little off. Even though it has the branding of a well-known store, you see some blurry images and grammatical errors. This is an example of a spoofed site.</p>
+                </div>
+                <a class="btn-outline-reg mfp-close as-button page-scroll" href="#types">BACK</a> 
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+
+    <!-- Lightbox -->
+    <div id="type-4" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="images/popupPhishing.png" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>Pop-up Phishing</h3>
+                <hr class="line-heading">
+                <h6>What is Pop-up Phishing?</h6>
+                <p>Pop-up phishing is a type of attack that leverages adware and pop-up ads to trick users into downloading malware onto their devices.</p>
+                <p>Common characteristics of these attacks include fake virus alerts and scare tactics to get you to click without thinking. </p>
+                <div class="testimonial-container">
+                    <p class="testimonial-text">An example of pop-up phishing is if you’re browsing the web and are bombarded by a pop-up informing you that your device has been infected by a virus. The pop-up also states that you can remove the virus by inputting your information and downloading an antivirus program. While it might be tempting to follow the instructions, this is likely fake antivirus software designed to steal your information. </p>
+                </div>
+                <a class="btn-outline-reg mfp-close as-button page-scroll" href="#types">BACK</a> 
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+
+
+    <!-- preventons -->
+    <div id="preventions" class="counter">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-xl-6">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/prevention.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-7 col-xl-6">
+                    <div class="text-container">
+                        <div class="section-title">Preventions</div>
+                        <h2>How to prevents?</h2>
+                        <p>With a variety of different phishing examples to be aware of, you may be wondering if there is anything you can do to protect against phishing scams. While you might not be able to stop every phishing attempt, you can reduce the amount by following these steps. </p>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body"><strong>Preventions Tips for Spear phishing:</strong> Common red flags of a phishing scam include unsolicited messages, spelling errors, a sense of urgency, requests for personal information, and suspicious links and attachments. </div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body"><strong>Preventions Tips for Clone phishing:</strong> Keep an eye out for duplicate emails and check the sender’s email address before engaging with the message. </div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body"><strong>Preventions Tips for Website Spoofing:</strong> Before purchasing anything online, double-check the URL to confirm you’re on the store’s official website. </div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body"><strong>Preventions Tips for Pop-up phishing:</strong> Enable a pop-up blocker and avoid clicking on any pop-up windows you  encounter online. </div>
+                            </li>
+                        </ul>
+
+                    </div> <!-- end of text-container -->      
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+        <div class="courseprogress">
+            <p>Click the button to confirm your progress for this section <button class="progress-button btn btn-info" data-section="preventions">Confirm Progress</button></p>
+        </div>
+    </div> <!-- end of counter -->
+    <!-- end of about -->
+
+            <!-- prevention 2 -->
+            <div id="preventions2" class="cards-1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                         <h4 style="text-align:center;">Other preventions tips on Phishing</h4> 
+                         <br>
+                         <br>  
+                            <!-- Card -->
+                            <div class="card">
+                                <span class="fa-stack">
+                                    <span class="hexagon"></span>
+                                    <i class="fas fa-binoculars fa-stack-1x"></i>
+                                </span>
+                                <div class="card-body">
+                                    <h4 class="card-title">Look for warning signs</h4>
+                                    <p>Common red flags of a phishing scam include unsolicited messages, spelling errors, a sense of urgency, requests for personal information, and suspicious links and attachments. </p>
+                                </div>
+                            </div>
+                            <!-- end of card -->
+        
+                            <!-- Card -->
+                            <div class="card">
+                                <span class="fa-stack">
+                                    <span class="hexagon"></span>
+                                    <i class="fas fa-reply fa-stack-1x"></i>
+                                </span>
+                                <div class="card-body">
+                                    <h4 class="card-title">Don’t respond</h4>
+                                    <p>One of the safest responses to a phishing attack is no response at all. Even if you don’t give the scammer the information they want, responding will only let them know that they’ve found an active email address, encouraging them to try again in the future. </p>
+                                </div>
+                            </div>
+                            <!-- end of card -->
+        
+                            <!-- Card -->
+                            <div class="card">
+                                <span class="fa-stack">
+                                    <span class="hexagon"></span>
+                                    <i class="fas fa-hand-pointer fa-stack-1x"></i>
+                                </span>
+                                <div class="card-body">
+                                    <h4 class="card-title">Avoid clicking on links and attachments</h4>
+                                    <p>When dealing with a message from an unknown sender, it’s best to avoid opening any links and attachments, because you could end up on an unsafe website or expose your device to malware.</p>
+                                </div>
+                            </div>
+                            <!-- end of card -->
+        
+                            <!-- Card -->
+                            <div class="card">
+                                <span class="fa-stack">
+                                    <span class="hexagon"></span>
+                                    <i class="fas fa-lock fa-stack-1x"></i>
+                                </span>
+                                <div class="card-body">
+                                    <h4 class="card-title">Use a virtual private network (VPN)</h4>
+                                    <p>Certain phishing attacks use unsecure public Wi-Fi networks to gain access to your private information. To help protect yourself, use a VPN.</p>
+                                </div>
+                            </div>
+                            <!-- end of card -->
+
+                            <!-- Card -->
+                            <div class="card">
+                                <span class="fa-stack">
+                                    <span class="hexagon"></span>
+                                    <i class="fas fa-ban fa-stack-1x"></i>
+                                </span>
+                                <div class="card-body">
+                                    <h4 class="card-title">Enable pop-up blockers</h4>
+                                    <p>Using pop-up blockers is a great way to protect yourself from accidentally clicking on something designed to steal your information.</p>
+                                </div>
+                            </div>
+                            <!-- end of card -->
+
+                            <!-- Card -->
+                            <div class="card" >
+                                <span class="fa-stack">
+                                    <span class="hexagon"></span>
+                                    <i class="fas fa-user-shield fa-stack-1x"></i>
+                                </span>
+                                <div class="card-body">
+                                    <h4 class="card-title">Install antivirus software</h4>
+                                    <p>As an additional precaution, installing trusted antivirus software can help protect  your device from all sorts of cyberattacks, including phishing.</p>
+                                </div>
+                            </div>
+                            <!-- end of card -->
+
+                            <!-- Card -->
+                            <div class="card">
+                                <span class="fa-stack">
+                                    <span class="hexagon"></span>
+                                    <i class="fas fa-user-lock fa-stack-1x"></i>
+                                </span>
+                                <div class="card-body">
+                                    <h4 class="card-title">Use two-factor authentication (2FA)</h4>
+                                    <p>Enabling 2FA on your online accounts gives you a second layer of protection from phishing scams. That way, even if a phishing attack ends with your passwords exposed, scammers won’t be able to log into your account, giving you additional time to reset your passwords.</p>
+                                </div>
+                            </div>
+                            <!-- end of card -->
+
+                        
+        
+                        </div> <!-- end of col -->
+                    </div> <!-- end of row -->
+                </div> <!-- end of container -->
+                <div class="courseprogress">
+                    <p>Click the button to confirm your progress for this section <button class="progress-button btn btn-info" data-section="preventions2">Confirm Progress</button></p>
+                </div>
+                <div class="quizlink">
+                    <p>Congratulation!! you have completed 100% of the course. Click here to take Expert Level Quiz<br><br><button class="btn btn-success" onclick="goQuiz()">Start</button></p>
+                </div>
+            </div> <!-- end of cards-1 -->
+            <!-- end of description -->
+
+
+    <!-- Footer -->
+    <div id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-container about">
+                        <h4>Credit</h4>
+                        <p class="white">Information from this phishing course was sourced from several websites. We acknowledge the valuable insights and resources provided by these sources in the development of this course. Special thanks for their contributions go to: </p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-md-2">
+                    <div class="text-container">
+                        <h4>Links</h4>
+                        <ul class="list-unstyled li-space-lg white">
+                            <li>
+                                <a class="white" href="https://www.phishing.org/history-of-phishing">www.phishing.org</a>
+                            </li>
+                            <li>
+                                <a class="white" href="https://us.norton.com/blog/online-scams/types-of-phishing">us.norton.com</a>
+                            </li>
+                            <li>
+                                <a class="white" href="https://www.knowbe4.com/phishing#4">www.knowbe4.com</a>
+                            </li>
+                            <li>
+                                <a class="white" href="https://www.slideshare.net/AniketPandit18/phishing-attack-seminar-presentation">www.slideshare.net</a>
+                            </li>
+                        </ul>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
+    
+    	
+    <!-- Scripts -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        import { getDatabase, ref, onValue, set, update } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+    
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+  apiKey: "AIzaSyDPRVp-gibvlZ5VIUl4ZfBxBcOpA5fjatc",
+  authDomain: "phish-38fef.firebaseapp.com",
+  databaseURL: "https://phish-38fef-default-rtdb.firebaseio.com/",
+  projectId: "phish-38fef",
+  storageBucket: "phish-38fef.appspot.com",
+  messagingSenderId: "206566350425",
+  appId: "1:206566350425:web:2daec834375550dba55b48"
+};
+    
+         // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase();
+    const auth = getAuth();
+    const usernameLink = document.querySelector('.username-link');
+
+// Check if the user is authenticated
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        // User is signed in
+        const userId = user.uid;
+        console.log("User is logged in:", userId);
+
+        // Fetch user information from the database using the current user's ID
+        const userRef = ref(database, 'users/' + userId);
+        onValue(userRef, (snapshot) => {
+            const userData = snapshot.val();
+            displayUserInfo(userData);
+            document.getElementById('avatar').src = getProfileIconSrc(userData.profileIcon);
+        });
+    } else {
+        console.log("No user is currently logged in");
+    }
+});
+
+function displayUserInfo(userData) {
+    // Display user information on the page
+    if (userData) {
+        usernameLink.textContent = userData.username ; // Display username in the navigation
+    } else {
+        console.log('User data not available');
+    }
+}
+
+function getProfileIconSrc(iconName) {
+    switch(iconName) {
+        case "Icon 1":
+            return "images/team-1.png";
+        case "Icon 2":
+            return "images/team-2.png";
+        case "Icon 3":
+            return "images/team-3.png";
+        default:
+            // Handle the case if the iconName is not recognized
+            return "images/defaultAvatar.jpg"; // You might want to return a default image path or handle this case differently based on your requirements
+    }
+}
+
+
+    // Logout function
+    function logout() {
+            auth.signOut().then(() => {
+                window.location.href = 'SignInOut.html'; // Redirect to login page
+            }).catch((error) => {
+                console.error('Sign Out Error', error);
+            });
+        }
+
+        // Attach logout function to the logout link
+        document.getElementById('logout-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            logout();
+        });
+
+
+    // Define the completedSections object
+    var completedSections = {};
+
+    // Attach event listeners to buttons dynamically
+    document.querySelectorAll('.progress-button').forEach(button => {
+        button.addEventListener('click', function() {
+            const sectionId = this.dataset.section;
+            confirmProgress(sectionId);
+            this.disabled = true; // Disable the button after clicking
+        });
+    });
+
+    // Define the confirmProgress function
+    function confirmProgress(sectionId) {
+        completedSections[sectionId] = true;
+        updateProgress();
+        saveSectionProgress();
+    }
+
+    // Function to save section progress in Firebase
+    function saveSectionProgress() {
+        const user = auth.currentUser;
+        if (user) {
+            const userId = user.uid;
+            const userSectionsRef = ref(database, 'users/' + userId + '/sections');
+
+            // Update user's section progress
+            set(userSectionsRef, completedSections).then(() => {
+                console.log('Section progress saved successfully!');
+            }).catch((error) => {
+                console.error('Error saving section progress: ', error);
+            });
+        } else {
+            console.log('No user is currently logged in');
+        }
+    }
+
+    // Function to save progress in Firebase
+    function saveProgress(progress) {
+        const user = auth.currentUser;
+        if (user) {
+            const userId = user.uid;
+            const userProgressRef = ref(database, 'users/' + userId + '/progress');
+
+            // Update user's progress
+            set(userProgressRef, {
+                courseProgress: progress
+            }).then(() => {
+                console.log('Progress saved successfully!');
+            }).catch((error) => {
+                console.error('Error saving progress: ', error);
+            });
+        } else {
+            console.log('No user is currently logged in');
+        }
+    }
+
+    // Modified function to update progress and save it in Firebase
+    function updateProgress() {
+        var totalSections = 5; // Total number of sections
+        var completedCount = Object.keys(completedSections).length;
+        var progress = (completedCount / totalSections) * 100;
+        progress = Math.round(progress);
+        console.log("Progress:", progress + "%");
+
+        // Save progress in Firebase
+        saveProgress(progress);
+    }
+
+    // Function to load progress from Firebase
+    function loadProgress() {
+        const user = auth.currentUser;
+        if (user) {
+            const userId = user.uid;
+            const userSectionsRef = ref(database, 'users/' + userId + '/sections');
+
+            onValue(userSectionsRef, (snapshot) => {
+                const data = snapshot.val();
+                if (data) {
+                    completedSections = data;
+                    updateButtonsState();
+                }
+            });
+        }
+    }
+
+    // Function to update buttons state based on loaded progress
+    function updateButtonsState() {
+        document.querySelectorAll('.progress-button').forEach(button => {
+            const sectionId = button.dataset.section;
+            if (completedSections[sectionId]) {
+                button.disabled = true;
+            }
+        });
+    }
+
+    // Check if the user is authenticated and load progress
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            loadProgress();
+        } else {
+            console.log('No user is currently logged in');
+        }
+    });
+    </script>
+
+<script>
+    function goQuiz() {
+window.location.href = 'quizzes.html';
+}
+</script>
+
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+    <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+    <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+</html>

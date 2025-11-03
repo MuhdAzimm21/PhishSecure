@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>PhishSecure</title>
+    
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+	<link href="css/magnific-popup.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="images/logo.png">
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+    
+    <!-- Preloader -->
+	<div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+    
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
+
+        <!-- Image Logo -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="username-link"  style="color:rgb(13, 164, 190)" > </a>
+            </li>
+            </ul>
+            <a class="navbar-brand logo-image" href="profile.html"><img id="avatar" src="images/defaultAvatar.jpg" class="avatar"></a>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-awesome fas fa-bars"></span>
+                <span class="navbar-toggler-awesome fas fa-times"></span>
+            </button>
+            <!-- end of mobile menu toggle button -->
+    
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="dashboard.html">DASHBOARD</a>
+                    </li>
+                    <!-- Dropdown Menu -->          
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle page-scroll" href="course.html" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">PHISHING</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item page-scroll" href="course.html#intro"><span class="item-text">INTRODUCTION</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item page-scroll" href="course.html#history"><span class="item-text">HISTORY</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item page-scroll" href="course.html#types"><span class="item-text">TYPES</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item page-scroll" href="course.html#preventions"><span class="item-text">PREVENTIONS</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item page-scroll" href="course.html#footer"><span class="item-text">CREDIT</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                        </div>
+                    </li>
+                    <!-- end of dropdown menu -->
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="quizzes.html">QUIZZES</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="profile.html">PROFILE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="leaderboard.html">LEADERBOARD</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link page-scroll" href="login.html" id="logout-link">LOGOUT</a>
+                </li>
+                </ul>
+            </div>
+        </nav> <!-- end of navbar -->
+        <!-- end of navbar -->
+
+
+
+    <!-- Quiz -->
+    <div class="cards-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">Phishing Quiz</div>
+                    <h2>Take The Beginner's Level Question<br> And Unlock the next Level</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="img-fluid" src="images/beginner.jpg" alt="alternative">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Beginner's Level</h3>
+                            <p>Consist of 10 fill in the blank questions. You need to choose the best answer for the questions</p>
+                            <ul class="list-unstyled li-space-lg">
+                                <li class="media">
+                                    <i class="fas fa-square"></i>
+                                    <div class="media-body">Score 50 points to unlock next levels</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-square"></i>
+                                    <div class="media-body">Once you reach 50 points and above, you can't take this quiz anymore!!</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-square"></i>
+                                    <div class="media-body">Score 80 points to gain a badge</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="button-container">
+                            <a class="btn-solid-reg page-scroll" href="beginnerquiz.html">START</a>
+                        </div> <!-- end of button-container -->
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="img-fluid" src="images/intermediate.jpg" alt="alternative">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Intermediate's Level</h3>
+                            <p>Consist of 10 Yes/No question. You need to answer all of the questions</p>
+                            <ul class="list-unstyled li-space-lg">
+                                <li class="media">
+                                    <i class="fas fa-square"></i>
+                                    <div class="media-body">Score 50 points to unlock next levels</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-square"></i>
+                                    <div class="media-body">Once you reach 50 points and above, you can't take this quiz anymore!!</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-square"></i>
+                                    <div class="media-body">Score 80 points to gain a badge</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="button-container">
+                            <div class="unclickable" id="myLink1">
+                                <a class="btn-solid-reg page-scroll" href="intermediatequiz.html">START<i class="fas fa-lock lock-icon"></i> </a>
+                            </div>
+                        </div> <!-- end of button-container -->
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="img-fluid" src="images/expert.png" alt="alternative">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Expert's Level</h3>
+                            <p>Consist of 10 multiple choice questions. You need to choose the right answer</p>
+                            <ul class="list-unstyled li-space-lg">
+                                <li class="media">
+                                    <i class="fas fa-square"></i>
+                                    <div class="media-body">Score 50 points to unlock next levels.</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-square"></i>
+                                    <div class="media-body">Once you reach 50 points and above, you can't take this quiz anymore!!</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-square"></i>
+                                    <div class="media-body">Score 80 points to gain a badge</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="button-container">
+                            <div class="unclickable" id="myLink2">
+                            <a class="btn-solid-reg page-scroll" href="expertquiz.html">START<i class="fas fa-lock lock-icon"></i></a>
+                        </div>
+                        </div> <!-- end of button-container -->
+                    </div>
+                    <!-- end of card -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-2 -->
+    <!-- end of services -->
+
+
+    <!-- Footer -->
+    <div id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-container about">
+                        <h4>Credit</h4>
+                        <p class="white">Information from this phishing course was sourced from several websites. We acknowledge the valuable insights and resources provided by these sources in the development of this course. Special thanks for their contributions go to: </p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-md-2">
+                    <div class="text-container">
+                        <h4>Links</h4>
+                        <ul class="list-unstyled li-space-lg white">
+                            <li>
+                                <a class="white" href="https://www.phishing.org/history-of-phishing">www.phishing.org</a>
+                            </li>
+                            <li>
+                                <a class="white" href="https://us.norton.com/blog/online-scams/types-of-phishing">us.norton.com</a>
+                            </li>
+                            <li>
+                                <a class="white" href="https://www.knowbe4.com/phishing#4">www.knowbe4.com</a>
+                            </li>
+                            <li>
+                                <a class="white" href="https://www.slideshare.net/AniketPandit18/phishing-attack-seminar-presentation">www.slideshare.net</a>
+                            </li>
+                        </ul>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
+    
+    	
+    <!-- Scripts -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        import { getDatabase, ref, onValue, update } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+    
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+  apiKey: "AIzaSyDPRVp-gibvlZ5VIUl4ZfBxBcOpA5fjatc",
+  authDomain: "phish-38fef.firebaseapp.com",
+  databaseURL: "https://phish-38fef-default-rtdb.firebaseio.com/",
+  projectId: "phish-38fef",
+  storageBucket: "phish-38fef.appspot.com",
+  messagingSenderId: "206566350425",
+  appId: "1:206566350425:web:2daec834375550dba55b48"
+};
+    
+         // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase();
+    const auth = getAuth();
+    const usernameLink = document.querySelector('.username-link');
+
+// Check if the user is authenticated
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        // User is signed in
+        const userId = user.uid;
+        console.log("User is logged in:", userId);
+
+        // Fetch user information from the database using the current user's ID
+        const userRef = ref(database, 'users/' + userId);
+        onValue(userRef, (snapshot) => {
+            const userData = snapshot.val();
+            displayUserInfo(userData);
+            unlock1(userData);
+            unlock2(userData);
+            calculateTotalPoints(userData);
+            calculateTotalBadges(userData);
+            disableQuizLinks(userData);
+        });
+    } else {
+        console.log("No user is currently logged in");
+    }
+});
+
+function disableQuizLinks(userData) {
+    // Check if user data is available and has the points property
+    if (userData && userData.points) {
+        const points = userData.points;
+
+        // Helper function to disable a quiz link and update the level in the database
+        function disableLink(link, level) {
+            link.removeAttribute('href');
+            link.innerHTML = "COMPLETED";
+            link.style.color = "white"; // Set text color to white
+
+            // Add hover effect to change color to black
+            link.addEventListener('mouseover', function() {
+                link.style.color = "black";
+            });
+
+            link.addEventListener('mouseout', function() {
+                link.style.color = "white";
+            });
+
+            // Update the current level in the Firebase database
+            const user = auth.currentUser;
+            if (user) {
+                const userId = user.uid;
+                const userLevelRef = ref(database, 'users/' + userId + '/currentLevel');
+
+                update(userLevelRef, {
+                    level: level
+                }).then(() => {
+                    console.log('Current level updated successfully in Firebase');
+                }).catch((error) => {
+                    console.error('Error updating level in Firebase: ', error);
+                });
+            }
+        }
+
+        // Disable Beginner Level quiz link if points are 50 or above
+        if (points.BeginnerLevel >= 50) {
+            const beginnerLink = document.querySelector('a[href="beginnerquiz.html"]');
+            disableLink(beginnerLink, 'Beginner');
+        }
+
+        // Disable Intermediate Level quiz link if points are 50 or above
+        if (points.IntermediateLevel >= 50) {
+            const intermediateLink = document.querySelector('a[href="intermediatequiz.html"]');
+            disableLink(intermediateLink, 'Intermediate');
+        }
+
+        // Disable Expert Level quiz link if points are 50 or above
+        if (points.ExpertLevel >= 50) {
+            const expertLink = document.querySelector('a[href="expertquiz.html"]');
+            disableLink(expertLink, 'Expert');
+        }
+    } else {
+        console.log('User data or points not available');
+    }
+}
+
+
+function displayUserInfo(userData) {
+    // Display user information on the page
+    if (userData) {
+        usernameLink.textContent = userData.username ; // Display username in the navigation
+        document.getElementById('avatar').src = getProfileIconSrc(userData.profileIcon);
+    } else {
+        console.log('User data not available');
+    }
+}
+
+function unlock1(userData) {
+    // Check if user data is available and has the points property
+    if (userData && userData.points) {
+        // Retrieve the points object from user data
+        const points = userData.points;
+
+        // Check if BeginnerLevel points exceed the threshold (50)
+        if (points.BeginnerLevel >= 50) {
+            // Remove the "unclickable" class
+            document.getElementById('myLink1').classList.remove('unclickable');
+        } else {
+            // Add the "unclickable" class
+            document.getElementById('myLink1').classList.add('unclickable');
+        }
+    } else {
+        console.log('User data or points not available');
+    }
+}
+
+function unlock2(userData) {
+    // Check if user data is available
+    if (userData && userData.points) {
+        // Retrieve the points object from user data
+        const points = userData.points;
+
+        // Check IntermediateLevel points exceed the threshold (50)
+        if (points.IntermediateLevel >= 50) {
+            // Remove the "unclickable" class
+            document.getElementById('myLink2').classList.remove('unclickable');
+        } else {
+            // Add the "unclickable" class
+            document.getElementById('myLink2').classList.add('unclickable');
+        }
+    } else {
+        console.log('User data not available');
+    }
+}
+
+function calculateTotalPoints(userData) {
+    let totalPoints = 0;
+
+    if (userData && userData.points) {
+        const points = userData.points;
+        // Check if each level's points exist and add them to the total
+        if (points.BeginnerLevel) {
+            totalPoints += points.BeginnerLevel;
+        }
+        if (points.IntermediateLevel) {
+            totalPoints += points.IntermediateLevel;
+        }
+        if (points.ExpertLevel) {
+            totalPoints += points.ExpertLevel;
+        }
+    } else {
+        console.log('User data or points not available');
+    }
+
+
+    const user = auth.currentUser;
+
+    // Update the total points in Firebase (assuming you have a reference to your Firebase database)
+    if (user) {
+        // Assuming 'users' is the node in your Firebase database where user data is stored
+        const userId = user.uid;
+        const userPointsRef = ref(database, 'users/' + userId + '/points');
+        update(userPointsRef, {
+                        totalPoints: totalPoints
+        }).then(() => {
+            console.log('Total points updated successfully in Firebase');
+        }).catch((error) => {
+            console.error('Error updating total points in Firebase: ', error);
+        });
+    } else {
+        console.log('User data or userId not available');
+    }
+}
+
+function calculateTotalBadges(userData) {
+    let totalBadges = 0;
+
+    // Check if each badge exists and increment totalBadges accordingly
+    if (userData && userData.badges) {
+        if (userData.badges.BeginnerBadge) {
+            totalBadges++;
+        }
+        if (userData.badges.IntermediateBadge) {
+            totalBadges++;
+        }
+        if (userData.badges.ExpertBadge) {
+            totalBadges++;
+        }
+    } else {
+        console.log('User data or badges not available');
+    }
+
+    const user = auth.currentUser;
+
+// Update the total badges in Firebase (assuming you have a reference to your Firebase database)
+if (user) {
+    // Assuming 'users' is the node in your Firebase database where user data is stored
+    const userId = user.uid;
+    const userBadgesRef = ref(database, 'users/' + userId + '/badges');
+    update(userBadgesRef, {
+                    totalBadges: totalBadges
+    }).then(() => {
+        console.log('Total badges updated successfully in Firebase');
+    }).catch((error) => {
+        console.error('Error updating total badges in Firebase: ', error);
+    });
+} else {
+    console.log('User data or userId not available');
+}
+}
+
+
+function getProfileIconSrc(iconName) {
+    switch(iconName) {
+        case "Icon 1":
+            return "images/team-1.png";
+        case "Icon 2":
+            return "images/team-2.png";
+        case "Icon 3":
+            return "images/team-3.png";
+        default:
+            // Handle the case if the iconName is not recognized
+            return "images/defaultAvatar.jpg"; // You might want to return a default image path or handle this case differently based on your requirements
+    }
+}
+
+        // Logout function
+        function logout() {
+            auth.signOut().then(() => {
+                window.location.href = 'SignInOut.html'; // Redirect to login page
+            }).catch((error) => {
+                console.error('Sign Out Error', error);
+            });
+        }
+
+        // Attach logout function to the logout link
+        document.getElementById('logout-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            logout();
+        });
+    </script>
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+    <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+    <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+
+</body>
+</html>
